@@ -118,7 +118,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/10/JavaScript回调函数/index.html">
 <meta property="og:site_name" content="Today Notes">
 <meta property="og:description" content="JavaScript回调函数原文地址 什么是回调函数In computer programming, a callback is a piece of executable code that is passed as an argument to other code, which is expected to call back (execute) the argument at some c">
-<meta property="og:updated_time" content="2017-05-10T02:49:57.785Z">
+<meta property="og:updated_time" content="2017-05-10T03:11:14.795Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript回调函数">
 <meta name="twitter:description" content="JavaScript回调函数原文地址 什么是回调函数In computer programming, a callback is a piece of executable code that is passed as an argument to other code, which is expected to call back (execute) the argument at some c">
@@ -360,6 +360,7 @@
 <h4 id="什么是回调函数"><a href="#什么是回调函数" class="headerlink" title="什么是回调函数"></a>什么是回调函数</h4><p>In computer programming, a callback is a piece of executable code that is passed as an argument to other code, which is expected to call back (execute) the argument at some convenient time［引自 维基百科 callback］</p>
 <p>回调函数是一段可执行的代码段，它作为一个参数传递给其他的代码，其作用是在需要的时候方便调用这段（回调函数）代码。</p>
 <p>在JavaScript中函数也是对象的一种，同样对象可以作为参数传递给函数，因此函数也可以作为参数传递给另外一个函数，这个作为参数的函数就是回调函数。</p>
+<a id="more"></a>
 <p>回调函数</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num1, num2, callback</span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> sum = num1 + num2;</div><div class="line">	callback(sum);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">print</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(num);</div><div class="line">&#125;</div><div class="line"></div><div class="line">add(<span class="number">1</span>, <span class="number">2</span>, print);		<span class="comment">//=&gt;3</span></div></pre></td></tr></table></figure>
 <p>匿名回调函数</p>
