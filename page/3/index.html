@@ -284,6 +284,183 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/01/Flex布局新旧混合写法详解（兼容微信）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Today">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Today Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/01/Flex布局新旧混合写法详解（兼容微信）/" itemprop="url">
+                  Flex布局新旧混合写法详解（兼容微信）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-01T22:44:14+08:00">
+                2017-03-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>假设flex容器为.box，子元素为.item。</p>
+<p><a href="https://segmentfault.com/a/1190000003978624" target="_blank" rel="external">原文地址</a></p>
+<h2 id="旧语法篇"><a href="#旧语法篇" class="headerlink" title="旧语法篇"></a>旧语法篇</h2><hr>
+<h3 id="定义容器的display属性"><a href="#定义容器的display属性" class="headerlink" title="定义容器的display属性"></a>定义容器的display属性</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">display</span>: -moz-box; <span class="comment">/*Firefox*/</span></div><div class="line">    <span class="attribute">display</span>: -webkit-box; <span class="comment">/*Safari,Opera,Chrome*/</span></div><div class="line">    <span class="attribute">display</span>: box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="容器属性"><a href="#容器属性" class="headerlink" title="容器属性"></a>容器属性</h3><h3 id="1-box-pack属性"><a href="#1-box-pack属性" class="headerlink" title="1.box-pack属性"></a>1.box-pack属性</h3><pre><code>box-pack定义子元素主轴对齐方式。
+</code></pre><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">-moz-box-pack</span>: center; <span class="comment">/*Firefox*/</span></div><div class="line">    <span class="attribute">-webkit-box-pack</span>: center; <span class="comment">/*Safari,Opera,Chrome*/</span></div><div class="line">    <span class="attribute">box-pack</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​    box-pack属性总共有4个值:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">box-pack</span>: start | end | center | justify;</div><div class="line">    <span class="comment">/*主轴对齐：左对齐（默认） | 右对齐 | 居中对齐 | 左右对齐*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="2-box-align属性"><a href="#2-box-align属性" class="headerlink" title="2.box-align属性"></a>2.box-align属性</h3><p>​    box-align定义子元素交叉轴对齐方式。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">-moz-box-align</span>: center; <span class="comment">/*Firefox*/</span></div><div class="line">    <span class="attribute">-webkit-box-align</span>: center; <span class="comment">/*Safari,Opera,Chrome*/</span></div><div class="line">    <span class="attribute">box-align</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​    box-align属性总共有5个值:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">box-align</span>: start | end | center | baseline | stretch;</div><div class="line">    <span class="comment">/*交叉轴对齐：顶部对齐（默认） | 底部对齐 | 居中对齐 | 文本基线对齐 | 上下对齐并铺满*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="3-box-direction属性"><a href="#3-box-direction属性" class="headerlink" title="3.box-direction属性"></a>3.box-direction属性</h3><p>​    box-direction定义子元素的显示方向。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">-moz-box-direction</span>: reverse; <span class="comment">/*Firefox*/</span></div><div class="line">    <span class="attribute">-webkit-box-direction</span>: reverse; <span class="comment">/*Safari,Opera,Chrome*/</span></div><div class="line">    <span class="attribute">box-direction</span>: reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​    box-direction属性总共有3个值:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">box-direction</span>: normal | reverse | inherit;</div><div class="line">    <span class="comment">/*显示方向：默认方向 | 反方向 | 继承子元素的 box-direction*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="4-box-orient属性"><a href="#4-box-orient属性" class="headerlink" title="4.box-orient属性"></a>4.box-orient属性</h3><p>​    box-orient定义子元素是否应水平或垂直排列。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">-moz-box-orient</span>: horizontal; <span class="comment">/*Firefox*/</span></div><div class="line">    <span class="attribute">-webkit-box-orient</span>: horizontal; <span class="comment">/*Safari,Opera,Chrome*/</span></div><div class="line">    <span class="attribute">box-orient</span>: horizontal;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​    box-orient属性总共有5个值:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">box-orient</span>: horizontal | vertical | inline-axis | block-axis | inherit;</div><div class="line">    <span class="comment">/*排列方向：水平 | 垂直 | 行内方式排列（默认） | 块方式排列 | 继承父级的box-orient*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="5-box-lines属性"><a href="#5-box-lines属性" class="headerlink" title="5.box-lines属性"></a>5.box-lines属性</h3><p>​    box-lines定义当元素超出了容器是否允许子元素换行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">    -moz-box-lines: multiple; /*Firefox*/</div><div class="line">    -webkit-box-lines: multiple; /*Safari,Opera,Chrome*/</div><div class="line">    box-lines: multiple;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​    box-lines属性总共有2个值:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">box-lines</span>: single | multiple;</div><div class="line">    <span class="comment">/*允许换行：不允许（默认） | 允许*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="子元素属性"><a href="#子元素属性" class="headerlink" title="子元素属性"></a>子元素属性</h2><h3 id="1-box-flex属性"><a href="#1-box-flex属性" class="headerlink" title="1.box-flex属性"></a>1.box-flex属性</h3><p>​    box-flex定义是否允许当前子元素伸缩。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">    -moz-box-flex: 1.0; /*Firefox*/</div><div class="line">    -webkit-box-flex: 1.0; /*Safari,Opera,Chrome*/</div><div class="line">    box-flex: 1.0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​    box-flex属性使用一个浮点值:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span>&#123;</div><div class="line">    <span class="attribute">box-flex</span>: &lt;value&gt;;</div><div class="line">    <span class="comment">/*伸缩：&lt;一个浮点数，默认为0.0，即表示不可伸缩，大于0的值可伸缩，柔性相对&gt;*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="2-box-ordinal-group属性"><a href="#2-box-ordinal-group属性" class="headerlink" title="2.box-ordinal-group属性"></a>2.box-ordinal-group属性</h3><p>​    box-ordinal-group定义子元素的显示次序，数值越小越排前。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span>&#123;</div><div class="line">    <span class="attribute">-moz-box-ordinal-group</span>: <span class="number">1</span>; <span class="comment">/*Firefox*/</span></div><div class="line">    <span class="attribute">-webkit-box-ordinal-group</span>: <span class="number">1</span>; <span class="comment">/*Safari,Opera,Chrome*/</span></div><div class="line">    <span class="attribute">box-ordinal-group</span>: <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​    box-direction属性使用一个整数值:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span>&#123;</div><div class="line">    <span class="attribute">box-ordinal-group</span>: &lt;integer&gt;;</div><div class="line">    <span class="comment">/*显示次序：&lt;一个整数，默认为1，数值越小越排前&gt;*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="新版语法"><a href="#新版语法" class="headerlink" title="新版语法"></a>新版语法</h2><hr>
+<h3 id="定义容器的display属性-1"><a href="#定义容器的display属性-1" class="headerlink" title="定义容器的display属性"></a>定义容器的display属性</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">display</span>: -webkit-flex; <span class="comment">/*webkit*/</span></div><div class="line">    <span class="attribute">display</span>: flex;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/*行内flex*/</span></div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">display</span>: -webkit-inline-flex; <span class="comment">/*webkit*/</span></div><div class="line">    <span class="attribute">display</span>:inline-flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="容器样式"><a href="#容器样式" class="headerlink" title="容器样式"></a>容器样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse;</div><div class="line">    <span class="comment">/*主轴方向：左到右（默认） | 右到左 | 上到下 | 下到上*/</span></div><div class="line"></div><div class="line">    <span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;</div><div class="line">    <span class="comment">/*换行：不换行（默认） | 换行 | 换行并第一行在下方*/</span></div><div class="line"></div><div class="line">    <span class="attribute">flex-flow</span>: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;</div><div class="line">    <span class="comment">/*主轴方向和换行简写*/</span></div><div class="line"></div><div class="line">    <span class="attribute">justify-content</span>: flex-start | flex-end | center | space-between | space-around;</div><div class="line">    <span class="comment">/*主轴对齐方式：左对齐（默认） | 右对齐 | 居中对齐 | 两端对齐 | 平均分布*/</span></div><div class="line"></div><div class="line">    <span class="attribute">align-items</span>: flex-start | flex-end | center | baseline | stretch;</div><div class="line">    <span class="comment">/*交叉轴对齐方式：顶部对齐（默认） | 底部对齐 | 居中对齐 | 上下对齐并铺满 | 文本基线对齐*/</span></div><div class="line"></div><div class="line">    <span class="attribute">align-content</span>: flex-start | flex-end | center | space-between | space-around | stretch;</div><div class="line">    <span class="comment">/*多主轴对齐：顶部对齐（默认） | 底部对齐 | 居中对齐 | 上下对齐并铺满 | 上下平均分布*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="子元素属性-1"><a href="#子元素属性-1" class="headerlink" title="子元素属性"></a>子元素属性</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span>&#123;</div><div class="line">    <span class="attribute">order</span>: &lt;integer&gt;;</div><div class="line">    <span class="comment">/*排序：数值越小，越排前，默认为0*/</span></div><div class="line"></div><div class="line">    <span class="attribute">flex-grow</span>: &lt;number&gt;; <span class="comment">/* default 0 */</span></div><div class="line">    <span class="comment">/*放大：默认0（即如果有剩余空间也不放大，值为1则放大，2是1的双倍大小，以此类推）*/</span></div><div class="line"></div><div class="line">    <span class="attribute">flex-shrink</span>: &lt;number&gt;; <span class="comment">/* default 1 */</span></div><div class="line">    <span class="comment">/*缩小：默认1（如果空间不足则会缩小，值为0不缩小）*/</span></div><div class="line"></div><div class="line">    <span class="attribute">flex-basis</span>: &lt;length&gt; | auto; <span class="comment">/* default auto */</span></div><div class="line">    <span class="comment">/*固定大小：默认为0，可以设置px值，也可以设置百分比大小*/</span></div><div class="line"></div><div class="line">    <span class="attribute">flex</span>: none | [ &lt;<span class="string">'flex-grow'</span>&gt; &lt;<span class="string">'flex-shrink'</span>&gt;? || &lt;<span class="string">'flex-basis'</span>&gt; ]</div><div class="line">    <span class="comment">/*flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto，*/</span></div><div class="line"></div><div class="line">    align-self: auto | flex-start | flex-end | center | baseline | stretch;</div><div class="line">    <span class="comment">/*单独对齐方式：自动（默认） | 顶部对齐 | 底部对齐 | 居中对齐 | 上下对齐并铺满 | 文本基线对齐*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="兼容写法"><a href="#兼容写法" class="headerlink" title="兼容写法"></a>兼容写法</h3><p>​    首先是定义容器的diplay属性:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">display</span>: -webkit-box; <span class="comment">/* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */</span></div><div class="line">    <span class="attribute">display</span>: -moz-box; <span class="comment">/* 老版本语法: Firefox (buggy) */</span></div><div class="line">    <span class="attribute">display</span>: -ms-flexbox; <span class="comment">/* 混合版本语法: IE 10 */</span></div><div class="line">    <span class="attribute">display</span>: -webkit-flex; <span class="comment">/* 新版本语法: Chrome 21+ */</span></div><div class="line">    <span class="attribute">display</span>: flex; <span class="comment">/* 新版本语法: Opera 12.1, Firefox 22+ */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​    由于旧版语法并没有列入W3C标准，所以这里不用写 <code>display:box</code> ，下面的语法也是一样的。</p>
+<p>​    这里还要注意的是，如果子元素是行内元素，在很多情况下都要使用 <code>display:block</code> 或 <code>display:inline-block</code> 把行内子元素变成块元素（例如使用 <code>box-flex</code> 属性），这也是旧版语法和新版语法的区别之一。</p>
+<h3 id="子元素主轴对齐方式"><a href="#子元素主轴对齐方式" class="headerlink" title="子元素主轴对齐方式"></a>子元素主轴对齐方式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">-webkit-box-pack</span>: center;</div><div class="line">    <span class="attribute">-moz-justify-content</span>: center;</div><div class="line">    <span class="attribute">-webkit-justify-content</span>: center;</div><div class="line">    <span class="attribute">justify-content</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​    这里的参数除了写法不同，其实是功能是一样的：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">box-align</span>: start | end | center | baseline | stretch;</div><div class="line">    <span class="comment">/*交叉轴对齐：顶部对齐（默认） | 底部对齐 | 居中对齐 | 文本基线对齐 | 上下对齐并铺满*/</span></div><div class="line"></div><div class="line">    <span class="attribute">align-items</span>: flex-start | flex-end | center | baseline | stretch;</div><div class="line">    <span class="comment">/*交叉轴对齐方式：顶部对齐（默认） | 底部对齐 | 居中对齐 | 上下对齐并铺满 | 文本基线对齐*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="子元素的显示方向"><a href="#子元素的显示方向" class="headerlink" title="子元素的显示方向"></a>子元素的显示方向</h3><p>​    子元素的显示方向可通过 <code>box-direction + box-orient + flex-direction</code> 实现，下面请看实例：</p>
+<h4 id="左到右"><a href="#左到右" class="headerlink" title="左到右"></a>左到右</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">-webkit-box-direction</span>: normal;</div><div class="line">    <span class="attribute">-webkit-box-orient</span>: horizontal;</div><div class="line">    <span class="attribute">-moz-flex-direction</span>: row;</div><div class="line">    <span class="attribute">-webkit-flex-direction</span>: row;</div><div class="line">    <span class="attribute">flex-direction</span>: row;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="右到左"><a href="#右到左" class="headerlink" title="右到左"></a>右到左</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">-webkit-box-pack</span>: end;</div><div class="line">    <span class="attribute">-webkit-box-direction</span>: reverse;</div><div class="line">    <span class="attribute">-webkit-box-orient</span>: horizontal;</div><div class="line">    <span class="attribute">-moz-flex-direction</span>: row-reverse;</div><div class="line">    <span class="attribute">-webkit-flex-direction</span>: row-reverse;</div><div class="line">    <span class="attribute">flex-direction</span>: row-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​    这里补充说明一点： box 写法的 <code>box-direction</code> 只是改变了子元素的排序，并没有改变对齐方式，需要新增一个 <code>box-pack</code> 来改变对齐方式。</p>
+<h4 id="上到下"><a href="#上到下" class="headerlink" title="上到下"></a>上到下</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">    -webkit-box-direction: normal;</div><div class="line">    -webkit-box-orient: vertical;</div><div class="line">    -moz-flex-direction: column;</div><div class="line">    -webkit-flex-direction: column;</div><div class="line">    flex-direction: column;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="下到上"><a href="#下到上" class="headerlink" title="下到上"></a>下到上</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">-webkit-box-pack</span>: end;</div><div class="line">    <span class="attribute">-webkit-box-direction</span>: reverse;</div><div class="line">    <span class="attribute">-webkit-box-orient</span>: vertical;</div><div class="line">    <span class="attribute">-moz-flex-direction</span>: column-reverse;</div><div class="line">    <span class="attribute">-webkit-flex-direction</span>: column-reverse;</div><div class="line">    <span class="attribute">flex-direction</span>: column-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="是否允许子元素伸缩"><a href="#是否允许子元素伸缩" class="headerlink" title="是否允许子元素伸缩"></a>是否允许子元素伸缩</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">    -webkit-box-flex: 1.0;</div><div class="line">    -moz-flex-grow: 1;</div><div class="line">    -webkit-flex-grow: 1;</div><div class="line">    flex-grow: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span>&#123;</div><div class="line">    <span class="attribute">-webkit-box-flex</span>: <span class="number">1.0</span>;</div><div class="line">    <span class="attribute">-moz-flex-shrink</span>: <span class="number">1</span>;</div><div class="line">    <span class="attribute">-webkit-flex-shrink</span>: <span class="number">1</span>;</div><div class="line">    <span class="attribute">flex-shrink</span>: <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​    上面是允许放大，box语法中 <code>box-flex</code> 如果不是0就表示该子元素允许伸缩，而flex是分开的，上面 <code>flex-grow</code> 是允许放大（默认不允许），下面的 <code>flex-shrink</code> 是允许缩小（默认允许）。<code>box-flex</code> 默认值为0，也就是说，在默认的情况下，在两个浏览器中的表现是不一样的：</p>
+<p>​    这里还有一点，就是新旧语法的算法是不一样的，假设 <code>box-flex</code> 的值不等于0，旧语法中，如果有多余的空间，<code>box-flex</code> 的值越大，说明空白部分的占比越多，反之亦然：</p>
+<p>​    而新版的语法中，放大的比例是直接按 <code>flex-grow</code> 的值来分配的，<code>flex-grow</code> 的缩放会覆盖 <code>flex-shrink:0</code>，看例子：</p>
+<p>​    参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.item&#123;</div><div class="line">    box-flex: &lt;value&gt;;</div><div class="line">    /*伸缩：&lt;一个浮点数，默认为0.0，即表示不可伸缩，大于0的值可伸缩，柔性相对&gt;*/</div><div class="line"></div><div class="line">    flex-grow: &lt;number&gt;; /* default 0 */</div><div class="line">    /*放大：默认0（即如果有剩余空间也不放大，值为1则放大，2是1的双倍大小，以此类推）*/</div><div class="line"></div><div class="line">    flex-shrink: &lt;number&gt;; /* default 1 */</div><div class="line">    /*缩小：默认1（如果空间不足则会缩小，值为0不缩小）*/</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="子元素的显示次序"><a href="#子元素的显示次序" class="headerlink" title="子元素的显示次序"></a>子元素的显示次序</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span>&#123;</div><div class="line">    <span class="attribute">-webkit-box-ordinal-group</span>: <span class="number">1</span>;</div><div class="line">    <span class="attribute">-moz-order</span>: <span class="number">1</span>;</div><div class="line">    <span class="attribute">-webkit-order</span>: <span class="number">1</span>;</div><div class="line">    <span class="attribute">order</span>: <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/github-hexo搭建手册/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -450,7 +627,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

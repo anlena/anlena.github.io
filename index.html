@@ -284,6 +284,140 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/18/json和string相互转换/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Today">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Today Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/18/json和string相互转换/" itemprop="url">
+                  json和string相互转换
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-18T16:01:59+08:00">
+                2017-05-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>jQuery插件支持的转换方式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$.parseJSON( jsonstr ); <span class="comment">//</span></div><div class="line">jQuery.parseJSON(jsonstr),可以将json字符串转换成json对象</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>浏览器支持的转换方式</strong>(Firefox，chrome，opera，safari，ie9，ie8)等浏览器：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">JSON</span>.parse(jsonstr); <span class="comment">//可以将json字符串转换成json对象 </span></div><div class="line"><span class="built_in">JSON</span>.stringify(jsonobj); <span class="comment">//可以将json对象转换成json对符串</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Javascript支持的转换方式</strong>： </p>
+<p>eval(‘(‘ + jsonstr + ‘)’); //可以将json字符串转换成json对象,注意需要在json字符外包裹一对小括号<br>注：ie8(兼容模式),ie7和ie6也可以使用eval()将字符串转为JSON对象，但不推荐这些方式，这种方式不安全eval会执行json串中的表达式。 </p>
+</li>
+<li><p><strong>JSON官方的转换方式</strong>： </p>
+<p><a href="http://www.json.org/提供了一个json.js,这样ie8(兼容模式),ie7和ie6就可以支持JSON对象以及其stringify()和parse()方法；" target="_blank" rel="external">http://www.json.org/提供了一个json.js,这样ie8(兼容模式),ie7和ie6就可以支持JSON对象以及其stringify()和parse()方法；</a><br>可以在<a href="https://github.com/douglascrockford/JSON-js上获取到这个js，一般现在用json2.js。" target="_blank" rel="external">https://github.com/douglascrockford/JSON-js上获取到这个js，一般现在用json2.js。</a></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/JavaScript回调函数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -796,133 +930,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/06/移动端小问题总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Today">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Today Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/06/移动端小问题总结/" itemprop="url">
-                  移动端小问题总结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-06T09:35:51+08:00">
-                2017-03-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="1-关于input-date-相关属性的样式默认字修改"><a href="#1-关于input-date-相关属性的样式默认字修改" class="headerlink" title="1.关于input[date]相关属性的样式默认字修改"></a>1.关于input[date]相关属性的样式默认字修改</h2><p>​    [相关地址]{<a href="http://www.zhangxinxu.com/wordpress/2013/06/%E4%BC%AA%E5%85%83%E7%B4%A0-%E8%A1%A8%E5%8D%95%E6%A0%B7%E5%BC%8F-pseudo-elements-style-form-controls/}" target="_blank" rel="external">http://www.zhangxinxu.com/wordpress/2013/06/%E4%BC%AA%E5%85%83%E7%B4%A0-%E8%A1%A8%E5%8D%95%E6%A0%B7%E5%BC%8F-pseudo-elements-style-form-controls/}</a></p>
-<p>​    [date地址]{<a href="http://www.zhangxinxu.com/study/201101/html5-form-feature-input-date.html}" target="_blank" rel="external">http://www.zhangxinxu.com/study/201101/html5-form-feature-input-date.html}</a></p>
-<p>​    [样式修改地址]{<a href="http://www.zhangxinxu.com/study/201306/pseudo-elements-to-style-type-date.html}" target="_blank" rel="external">http://www.zhangxinxu.com/study/201306/pseudo-elements-to-style-type-date.html}</a></p>
-<p>​    css:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">input</span><span class="selector-attr">[type="date"]</span><span class="selector-pseudo">:before</span>&#123;</div><div class="line">  <span class="attribute">content</span>: <span class="built_in">attr</span>(placeholder);</div><div class="line">  <span class="comment">/*color:#999999;*/</span></div><div class="line">&#125;</div><div class="line"><span class="selector-tag">input</span><span class="selector-attr">[type='date']</span><span class="selector-pseudo">::-inner-spin-button</span>&#123;</div><div class="line">  <span class="attribute">visibility</span>: hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">input</span><span class="selector-attr">[type='date']</span><span class="selector-pseudo">::-webkit-inner-spin-button</span> &#123; <span class="attribute">visibility</span>: hidden; &#125;</div></pre></td></tr></table></figure>
-<p>​    js:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = <span class="built_in">document</span>.getElementById(<span class="string">'time1'</span>);</div><div class="line">o.setAttribute(<span class="string">'placeholder'</span>,<span class="string">'到站时间'</span>);</div><div class="line">o.onfocus = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.removeAttribute(<span class="string">'placeholder'</span>);</div><div class="line">&#125;;</div><div class="line">o.onblur = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="keyword">this</span>.value == <span class="string">''</span>) <span class="keyword">this</span>.setAttribute(<span class="string">'placeholder'</span>,<span class="string">'到站时间'</span>);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -972,7 +979,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
