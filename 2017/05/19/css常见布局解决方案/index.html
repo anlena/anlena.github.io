@@ -111,17 +111,17 @@
 
 
 
-<meta name="description" content="CSS常见布局解决方案原文地址  说起css布局，那么一定得聊聊盒模型，清除浮动，position，display什么的，但本篇本不是讲这些基础知识的，而是给出各种布局的解决方案。  水平居中布局首先我们来看看水平居中 1.margin + 定宽12345678910&amp;lt;div class=&amp;quot;parent&amp;quot;&amp;gt;  &amp;lt;div class=&amp;quot;child&amp;qu">
+<meta name="description" content="CSS常见布局解决方案原文地址  说起css布局，那么一定得聊聊盒模型，清除浮动，position，display什么的，但本篇本不是讲这些基础知识的，而是给出各种布局的解决方案。">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css常见布局解决方案">
 <meta property="og:url" content="http://yoursite.com/2017/05/19/css常见布局解决方案/index.html">
 <meta property="og:site_name" content="Today Notes">
-<meta property="og:description" content="CSS常见布局解决方案原文地址  说起css布局，那么一定得聊聊盒模型，清除浮动，position，display什么的，但本篇本不是讲这些基础知识的，而是给出各种布局的解决方案。  水平居中布局首先我们来看看水平居中 1.margin + 定宽12345678910&amp;lt;div class=&amp;quot;parent&amp;quot;&amp;gt;  &amp;lt;div class=&amp;quot;child&amp;qu">
-<meta property="og:updated_time" content="2017-05-19T10:26:44.306Z">
+<meta property="og:description" content="CSS常见布局解决方案原文地址  说起css布局，那么一定得聊聊盒模型，清除浮动，position，display什么的，但本篇本不是讲这些基础知识的，而是给出各种布局的解决方案。">
+<meta property="og:updated_time" content="2017-05-20T10:05:44.866Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css常见布局解决方案">
-<meta name="twitter:description" content="CSS常见布局解决方案原文地址  说起css布局，那么一定得聊聊盒模型，清除浮动，position，display什么的，但本篇本不是讲这些基础知识的，而是给出各种布局的解决方案。  水平居中布局首先我们来看看水平居中 1.margin + 定宽12345678910&amp;lt;div class=&amp;quot;parent&amp;quot;&amp;gt;  &amp;lt;div class=&amp;quot;child&amp;qu">
+<meta name="twitter:description" content="CSS常见布局解决方案原文地址  说起css布局，那么一定得聊聊盒模型，清除浮动，position，display什么的，但本篇本不是讲这些基础知识的，而是给出各种布局的解决方案。">
 
 
 
@@ -360,6 +360,7 @@
 <blockquote>
 <p>说起css布局，那么一定得聊聊盒模型，清除浮动，<code>position</code>，<code>display</code>什么的，但本篇本不是讲这些基础知识的，而是给出各种布局的解决方案。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="水平居中布局"><a href="#水平居中布局" class="headerlink" title="水平居中布局"></a>水平居中布局</h2><p>首先我们来看看<strong>水平居中</strong></p>
 <h3 id="1-margin-定宽"><a href="#1-margin-定宽" class="headerlink" title="1.margin + 定宽"></a>1.margin + 定宽</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;parent&quot;&gt;</div><div class="line">  &lt;div class=&quot;child&quot;&gt;Demo&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;style&gt;</div><div class="line">  .child &#123;</div><div class="line">    width: 100px;</div><div class="line">    margin: 0 auto;</div><div class="line">  &#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
 <p>相必是个前端都见过，这定宽的水平居中，我们还可以用下面这种来实现不定宽的</p>
