@@ -111,15 +111,20 @@
 
 
 
-<meta name="description" content="竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Today Notes">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="1、垂直对齐 如果你用CSS，则你会有困惑：我该怎么垂直对齐容器中的元素？现在，利用CSS3的Transform，可以很优雅的解决这个困惑： 1234567.verticalcenter&amp;#123;    position: relative;    top: 50%;    -webkit-transform: translateY(-50%);    -o-transform: transla">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实用的60个css代码片段(转)">
+<meta property="og:url" content="http://yoursite.com/2017/05/23/实用的60个css代码片段-转/index.html">
 <meta property="og:site_name" content="Today Notes">
-<meta property="og:description" content="竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。">
+<meta property="og:description" content="1、垂直对齐 如果你用CSS，则你会有困惑：我该怎么垂直对齐容器中的元素？现在，利用CSS3的Transform，可以很优雅的解决这个困惑： 1234567.verticalcenter&amp;#123;    position: relative;    top: 50%;    -webkit-transform: translateY(-50%);    -o-transform: transla">
+<meta property="og:image" content="https://sfault-image.b0.upaiyun.com/352/854/3528546899-56fe3aca51c9d_articlex">
+<meta property="og:image" content="https://sfault-image.b0.upaiyun.com/377/497/3774978981-56fe3acb088b0_articlex">
+<meta property="og:updated_time" content="2017-05-23T10:43:16.039Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Today Notes">
-<meta name="twitter:description" content="竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。">
+<meta name="twitter:title" content="实用的60个css代码片段(转)">
+<meta name="twitter:description" content="1、垂直对齐 如果你用CSS，则你会有困惑：我该怎么垂直对齐容器中的元素？现在，利用CSS3的Transform，可以很优雅的解决这个困惑： 1234567.verticalcenter&amp;#123;    position: relative;    top: 50%;    -webkit-transform: translateY(-50%);    -o-transform: transla">
+<meta name="twitter:image" content="https://sfault-image.b0.upaiyun.com/352/854/3528546899-56fe3aca51c9d_articlex">
 
 
 
@@ -147,13 +152,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/23/实用的60个css代码片段-转/"/>
 
 
 
 
 
-  <title> Today Notes </title>
+  <title> 实用的60个css代码片段(转) | Today Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -178,9 +183,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-   page-home 
- ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -273,9 +276,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -305,10 +308,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/05/23/实用的60个css代码片段-转/" itemprop="url">
-                  实用的60个css代码片段(转)
-                </a>
+                实用的60个css代码片段(转)
               
             
           </h1>
@@ -359,9 +359,7 @@
       
 
       
-        
-          
-            <h4 id="1、垂直对齐"><a href="#1、垂直对齐" class="headerlink" title="1、垂直对齐"></a>1、垂直对齐</h4><hr>
+        <h4 id="1、垂直对齐"><a href="#1、垂直对齐" class="headerlink" title="1、垂直对齐"></a>1、垂直对齐</h4><hr>
 <p>如果你用<code>CSS</code>，则你会有困惑：我该怎么垂直对齐容器中的元素？现在，利用<code>CSS3</code>的<code>Transform</code>，可以很优雅的解决这个困惑：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.verticalcenter</span>&#123;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">translateY</span>(-50%);</div><div class="line">    <span class="attribute">-o-transform</span>: <span class="built_in">translateY</span>(-50%);</div><div class="line">    <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-50%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>使用这个技巧，从单行文本、段落到box，都会垂直对齐。目前浏览器对<code>Transform</code>的支持是需要关注的，<br><code>Chrome 4</code>, <code>Opera 10</code>, <code>Safari 3</code>, <code>Firefox 3</code>, <code>and Internet Explorer 9</code>均支持该属性</p>
@@ -507,20 +505,27 @@
 <h4 id="60、带CSS3特色的横幅显示"><a href="#60、带CSS3特色的横幅显示" class="headerlink" title="60、带CSS3特色的横幅显示"></a>60、带CSS3特色的横幅显示</h4><hr>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.featureBanner</span> &#123;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">20px</span></div><div class="line">&#125;</div><div class="line"><span class="selector-class">.featureBanner</span><span class="selector-pseudo">:before</span> &#123;</div><div class="line">    <span class="attribute">content</span>: <span class="string">"Featured"</span>;</div><div class="line">    <span class="attribute">position</span>: absolute;</div><div class="line">    <span class="attribute">top</span>: <span class="number">5px</span>;</div><div class="line">    <span class="attribute">left</span>: -<span class="number">8px</span>;</div><div class="line">    <span class="attribute">padding-right</span>: <span class="number">10px</span>;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#232323</span>;</div><div class="line">    <span class="attribute">font-weight</span>: bold;</div><div class="line">    <span class="attribute">height</span>: <span class="number">0px</span>;</div><div class="line">    <span class="attribute">border</span>: <span class="number">15px</span> solid <span class="number">#ffa200</span>;</div><div class="line">    <span class="attribute">border-right-color</span>: transparent;</div><div class="line">    <span class="attribute">line-height</span>: <span class="number">0px</span>;</div><div class="line">    <span class="attribute">box-shadow</span>: -<span class="number">0px</span> <span class="number">5px</span> <span class="number">5px</span> -<span class="number">5px</span> <span class="number">#000</span>;</div><div class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.featureBanner</span><span class="selector-pseudo">:after</span> &#123;</div><div class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</div><div class="line">    <span class="attribute">position</span>: absolute;</div><div class="line">    <span class="attribute">top</span>: <span class="number">35px</span>;</div><div class="line">    <span class="attribute">left</span>: -<span class="number">8px</span>;</div><div class="line">    <span class="attribute">border</span>: <span class="number">4px</span> solid <span class="number">#89540c</span>;</div><div class="line">    <span class="attribute">border-left-color</span>: transparent;</div><div class="line">    <span class="attribute">border-bottom-color</span>: transparent;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -528,538 +533,38 @@
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/20/常见的UI框架/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Today">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Today Notes">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-              
-                
-                <a class="post-title-link" href="/2017/05/20/常见的UI框架/" itemprop="url">
-                  常见的UI框架
-                </a>
-              
+              <a href="/2017/05/20/常见的UI框架/" rel="prev" title="常见的UI框架">
+                常见的UI框架 <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-20T16:54:39+08:00">
-                2017-05-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h3 id="移动端框架"><a href="#移动端框架" class="headerlink" title="移动端框架"></a>移动端框架</h3><h4 id="1-Admui-管理系统快速开发框架–http-docs-admui-com"><a href="#1-Admui-管理系统快速开发框架–http-docs-admui-com" class="headerlink" title="1.Admui 管理系统快速开发框架–http://docs.admui.com/"></a>1.Admui 管理系统快速开发框架–<a href="http://docs.admui.com/">http://docs.admui.com/</a></h4><p>为什么选择Admui?代码开源–开放所有源码，不存在任何加密混淆代码，安全全程可控，开箱即用–包含了管理系统常用的基础功能，为业务产品提供强有力的支持，无限可能–借助于Admui，可以快速开发各种MIS系统，如CMS、OA、CRM、ERP、POS等</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/20/常见的UI框架/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/19/css常见布局解决方案/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Today">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Today Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/19/css常见布局解决方案/" itemprop="url">
-                  css常见布局解决方案
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-19T18:25:40+08:00">
-                2017-05-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="CSS常见布局解决方案"><a href="#CSS常见布局解决方案" class="headerlink" title="CSS常见布局解决方案"></a>CSS常见布局解决方案</h1><p><a href="http://www.xingxin.me/posts/590058affd9e613545f2d1f3">原文地址</a></p>
-<blockquote>
-<p>说起css布局，那么一定得聊聊盒模型，清除浮动，<code>position</code>，<code>display</code>什么的，但本篇本不是讲这些基础知识的，而是给出各种布局的解决方案。</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/19/css常见布局解决方案/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/18/json和string相互转换/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Today">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Today Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/18/json和string相互转换/" itemprop="url">
-                  json和string相互转换
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-18T16:01:59+08:00">
-                2017-05-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <ol>
-<li><p>jQuery插件支持的转换方式</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$.parseJSON( jsonstr ); <span class="comment">//</span></div><div class="line">jQuery.parseJSON(jsonstr),可以将json字符串转换成json对象</div></pre></td></tr></table></figure>
-</li>
-<li><p><strong>浏览器支持的转换方式</strong>(Firefox，chrome，opera，safari，ie9，ie8)等浏览器：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">JSON</span>.parse(jsonstr); <span class="comment">//可以将json字符串转换成json对象 </span></div><div class="line"><span class="built_in">JSON</span>.stringify(jsonobj); <span class="comment">//可以将json对象转换成json对符串</span></div></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Javascript支持的转换方式</strong>： </p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/18/json和string相互转换/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/JavaScript回调函数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Today">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Today Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/10/JavaScript回调函数/" itemprop="url">
-                  JavaScript回调函数
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T10:47:59+08:00">
-                2017-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="JavaScript回调函数"><a href="#JavaScript回调函数" class="headerlink" title="JavaScript回调函数"></a>JavaScript回调函数</h3><p><a href="https://cnodejs.org/topic/564dd2881ba2ef107f854e0b">原文地址</a></p>
-<h4 id="什么是回调函数"><a href="#什么是回调函数" class="headerlink" title="什么是回调函数"></a>什么是回调函数</h4><p>In computer programming, a callback is a piece of executable code that is passed as an argument to other code, which is expected to call back (execute) the argument at some convenient time［引自 维基百科 callback］</p>
-<p>回调函数是一段可执行的代码段，它作为一个参数传递给其他的代码，其作用是在需要的时候方便调用这段（回调函数）代码。</p>
-<p>在JavaScript中函数也是对象的一种，同样对象可以作为参数传递给函数，因此函数也可以作为参数传递给另外一个函数，这个作为参数的函数就是回调函数。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/10/JavaScript回调函数/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+  </div>
 
 
           </div>
@@ -1067,6 +572,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -1086,8 +595,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -1160,6 +678,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、垂直对齐"><span class="nav-number">1.</span> <span class="nav-text">1、垂直对齐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、伸展一个元素到窗口高度"><span class="nav-number">2.</span> <span class="nav-text">2、伸展一个元素到窗口高度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、基于文件格式使用不同的样式"><span class="nav-number">3.</span> <span class="nav-text">3、基于文件格式使用不同的样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、创建跨浏览器的图像灰度"><span class="nav-number">4.</span> <span class="nav-text">4、创建跨浏览器的图像灰度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、背景渐变动画"><span class="nav-number">5.</span> <span class="nav-text">5、背景渐变动画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、CSS：表格列宽自适用"><span class="nav-number">6.</span> <span class="nav-text">6、CSS：表格列宽自适用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7、只在一边或两边显示盒子阴影"><span class="nav-number">7.</span> <span class="nav-text">7、只在一边或两边显示盒子阴影</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8、包裹长文本"><span class="nav-number">8.</span> <span class="nav-text">8、包裹长文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9、制造模糊文本"><span class="nav-number">9.</span> <span class="nav-text">9、制造模糊文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10、用CSS动画实现省略号动画"><span class="nav-number">10.</span> <span class="nav-text">10、用CSS动画实现省略号动画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11、样式重置"><span class="nav-number">11.</span> <span class="nav-text">11、样式重置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12、典型的CSS清除浮动"><span class="nav-number">12.</span> <span class="nav-text">12、典型的CSS清除浮动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13、新版清除浮动（2011）"><span class="nav-number">13.</span> <span class="nav-text">13、新版清除浮动（2011）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#14、跨浏览器的透明"><span class="nav-number">14.</span> <span class="nav-text">14、跨浏览器的透明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#15、CSS引用模板"><span class="nav-number">15.</span> <span class="nav-text">15、CSS引用模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#16、个性圆角"><span class="nav-number">16.</span> <span class="nav-text">16、个性圆角</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#17、通用媒体查询"><span class="nav-number">17.</span> <span class="nav-text">17、通用媒体查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#18、现代字体栈"><span class="nav-number">18.</span> <span class="nav-text">18、现代字体栈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#19、自定义文本选择"><span class="nav-number">19.</span> <span class="nav-text">19、自定义文本选择</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#20、为logo隐藏H1"><span class="nav-number">20.</span> <span class="nav-text">20、为logo隐藏H1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#21、图片边框偏光"><span class="nav-number">21.</span> <span class="nav-text">21、图片边框偏光</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#22、锚链接伪类"><span class="nav-number">22.</span> <span class="nav-text">22、锚链接伪类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#23、奇特的CSS引用"><span class="nav-number">23.</span> <span class="nav-text">23、奇特的CSS引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#24、CSS3：全屏背景"><span class="nav-number">24.</span> <span class="nav-text">24、CSS3：全屏背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#25、内容垂直居中"><span class="nav-number">25.</span> <span class="nav-text">25、内容垂直居中</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#26、强制出现垂直滚动条"><span class="nav-number">26.</span> <span class="nav-text">26、强制出现垂直滚动条</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#27、CSS3渐变模板"><span class="nav-number">27.</span> <span class="nav-text">27、CSS3渐变模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#28、-font-face模板"><span class="nav-number">28.</span> <span class="nav-text">28、@font-face模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#29、缝合CSS3元素"><span class="nav-number">29.</span> <span class="nav-text">29、缝合CSS3元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#30、CSS3-斑马线"><span class="nav-number">30.</span> <span class="nav-text">30、CSS3 斑马线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#31、有趣的-amp"><span class="nav-number">31.</span> <span class="nav-text">31、有趣的&</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#32、大字段落"><span class="nav-number">32.</span> <span class="nav-text">32、大字段落</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#33、内部CSS3-盒阴影"><span class="nav-number">33.</span> <span class="nav-text">33、内部CSS3 盒阴影</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#34、外部CSS3-盒阴影"><span class="nav-number">34.</span> <span class="nav-text">34、外部CSS3 盒阴影</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#35、三角形列表项目符号"><span class="nav-number">35.</span> <span class="nav-text">35、三角形列表项目符号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#36、固定宽度的居中布局"><span class="nav-number">36.</span> <span class="nav-text">36、固定宽度的居中布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#37、CSS3-列文本"><span class="nav-number">37.</span> <span class="nav-text">37、CSS3 列文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#38、CSS固定页脚"><span class="nav-number">38.</span> <span class="nav-text">38、CSS固定页脚</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#39、IE6的PNG透明修复"><span class="nav-number">39.</span> <span class="nav-text">39、IE6的PNG透明修复</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#40、跨浏览器设置最小高度"><span class="nav-number">40.</span> <span class="nav-text">40、跨浏览器设置最小高度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#41、CSS3-鲜艳的输入"><span class="nav-number">41.</span> <span class="nav-text">41、CSS3 鲜艳的输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#42、基于文件类型的链接样式"><span class="nav-number">42.</span> <span class="nav-text">42、基于文件类型的链接样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#43、强制换行"><span class="nav-number">43.</span> <span class="nav-text">43、强制换行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#44、在可点击的项目上强制手型"><span class="nav-number">44.</span> <span class="nav-text">44、在可点击的项目上强制手型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#45、网页顶部盒阴影"><span class="nav-number">45.</span> <span class="nav-text">45、网页顶部盒阴影</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#46、CSS3对话气泡"><span class="nav-number">46.</span> <span class="nav-text">46、CSS3对话气泡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#47、H1-H5默认样式"><span class="nav-number">47.</span> <span class="nav-text">47、H1-H5默认样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#48、纯CSS背景噪音"><span class="nav-number">48.</span> <span class="nav-text">48、纯CSS背景噪音</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#49、持久的列表排序"><span class="nav-number">49.</span> <span class="nav-text">49、持久的列表排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#50、CSS悬浮提示文本"><span class="nav-number">50.</span> <span class="nav-text">50、CSS悬浮提示文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#51、深灰色的圆形按钮"><span class="nav-number">51.</span> <span class="nav-text">51、深灰色的圆形按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#52、在可打印的网页中显示URLs"><span class="nav-number">52.</span> <span class="nav-text">52、在可打印的网页中显示URLs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#53、禁用移动Webkit的选择高亮"><span class="nav-number">53.</span> <span class="nav-text">53、禁用移动Webkit的选择高亮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#54、CSS3-圆点图案"><span class="nav-number">54.</span> <span class="nav-text">54、CSS3 圆点图案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#55、CSS3-方格图案"><span class="nav-number">55.</span> <span class="nav-text">55、CSS3 方格图案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#56、Github的fork色带"><span class="nav-number">56.</span> <span class="nav-text">56、Github的fork色带</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#57、CSS-font属性缩写"><span class="nav-number">57.</span> <span class="nav-text">57、CSS font属性缩写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#58、论文页面的卷曲效果"><span class="nav-number">58.</span> <span class="nav-text">58、论文页面的卷曲效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#59、鲜艳的锚链接"><span class="nav-number">59.</span> <span class="nav-text">59、鲜艳的锚链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#60、带CSS3特色的横幅显示"><span class="nav-number">60.</span> <span class="nav-text">60、带CSS3特色的横幅显示</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1269,6 +803,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
