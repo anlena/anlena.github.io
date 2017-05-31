@@ -111,15 +111,17 @@
 
 
 
-<meta name="description" content="竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Today Notes">
-<meta property="og:url" content="http://yoursite.com/archives/2017/05/index.html">
+<meta name="description" content="原文地址">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="防止短时间内多次触发函数">
+<meta property="og:url" content="http://yoursite.com/2017/05/31/防止短时间内多次触发函数/index.html">
 <meta property="og:site_name" content="Today Notes">
-<meta property="og:description" content="竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。">
+<meta property="og:description" content="原文地址">
+<meta property="og:updated_time" content="2017-05-31T07:32:24.956Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Today Notes">
-<meta name="twitter:description" content="竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。">
+<meta name="twitter:title" content="防止短时间内多次触发函数">
+<meta name="twitter:description" content="原文地址">
 
 
 
@@ -147,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/05/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/31/防止短时间内多次触发函数/"/>
 
 
 
 
 
-  <title> 归档 | Today Notes </title>
+  <title> 防止短时间内多次触发函数 | Today Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -178,7 +180,7 @@
     
   
 
-  <div class="container sidebar-position-right  page-archive  ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -272,218 +274,151 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 16 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/31/防止短时间内多次触发函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Today">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Today Notes">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                防止短时间内多次触发函数
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-31T15:29:39+08:00">
+                2017-05-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
+
+      
+        <p><a href="http://www.css88.com/archives/4648" target="_blank" rel="external">原文地址</a></p>
+<a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> resizeTimer=<span class="literal">null</span>;</div><div class="line">$(<span class="built_in">window</span>).on(<span class="string">'resize'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       <span class="keyword">if</span>(resizeTimer)&#123;</div><div class="line">           clearTimeout(resizeTimer)</div><div class="line">       &#125;</div><div class="line">       resizeTimer=setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">           <span class="built_in">console</span>.log(<span class="string">"window resize"</span>);</div><div class="line">       &#125;,<span class="number">400</span>);</div><div class="line">   &#125;</div><div class="line">);</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
       
 
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/23/实用的60个css代码片段-转/" rel="prev" title="实用的60个css代码片段(转)">
+                实用的60个css代码片段(转) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
         </div>
       
-      
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/31/防止短时间内多次触发函数/" itemprop="url">
-              
-                <span itemprop="name">防止短时间内多次触发函数</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-31T15:29:39+08:00"
-              content="2017-05-31" >
-          05-31
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
+    <div class="post-spread">
       
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/23/实用的60个css代码片段-转/" itemprop="url">
-              
-                <span itemprop="name">实用的60个css代码片段(转)</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-23T18:38:18+08:00"
-              content="2017-05-23" >
-          05-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/20/常见的UI框架/" itemprop="url">
-              
-                <span itemprop="name">常见的UI框架</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-20T16:54:39+08:00"
-              content="2017-05-20" >
-          05-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/19/css常见布局解决方案/" itemprop="url">
-              
-                <span itemprop="name">css常见布局解决方案</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-19T18:25:40+08:00"
-              content="2017-05-19" >
-          05-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/18/json和string相互转换/" itemprop="url">
-              
-                <span itemprop="name">json和string相互转换</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-18T16:01:59+08:00"
-              content="2017-05-18" >
-          05-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2017/05/page/2/">2</a><a class="extend next" rel="next" href="/archives/2017/05/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
+    </div>
+  </div>
 
 
           </div>
@@ -491,6 +426,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -693,11 +632,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
 
 
   
