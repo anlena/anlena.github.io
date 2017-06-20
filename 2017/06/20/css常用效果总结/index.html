@@ -1,0 +1,834 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=sans:300,300italic,400,400italic,700,700italic|sans-serif:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Menlo:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="前端, HTML5,css,js," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="css常用效果总结原文地址 css有不少常用的效果，你在平时浏览网站的时候可能会看到，但是真的要自己写的时候，有时候会突然忘记，今天稍微对那些常见的效果做一下小结。">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css常用效果总结">
+<meta property="og:url" content="http://yoursite.com/2017/06/20/css常用效果总结/index.html">
+<meta property="og:site_name" content="Today Notes">
+<meta property="og:description" content="css常用效果总结原文地址 css有不少常用的效果，你在平时浏览网站的时候可能会看到，但是真的要自己写的时候，有时候会突然忘记，今天稍微对那些常见的效果做一下小结。">
+<meta property="og:image" content="http://www.haorooms.com/uploads/images/speach.jpg">
+<meta property="og:updated_time" content="2017-06-20T09:08:13.386Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css常用效果总结">
+<meta name="twitter:description" content="css常用效果总结原文地址 css有不少常用的效果，你在平时浏览网站的时候可能会看到，但是真的要自己写的时候，有时候会突然忘记，今天稍微对那些常见的效果做一下小结。">
+<meta name="twitter:image" content="http://www.haorooms.com/uploads/images/speach.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/20/css常用效果总结/"/>
+
+
+
+
+
+  <title> css常用效果总结 | Today Notes </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Today Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">note note note</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/20/css常用效果总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Today">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Today Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                css常用效果总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-20T17:05:03+08:00">
+                2017-06-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="css常用效果总结"><a href="#css常用效果总结" class="headerlink" title="css常用效果总结"></a>css常用效果总结</h1><p><a href="http://www.haorooms.com/post/css_common" target="_blank" rel="external">原文地址</a></p>
+<p>css有不少常用的效果，你在平时浏览网站的时候可能会看到，但是真的要自己写的时候，有时候会突然忘记，今天稍微对那些常见的效果做一下小结。</p>
+<a id="more"></a>
+<h3 id="1、每逢大的灾难的时候，很多网站变成了灰色，如何让网站快速变灰？css代码是很简单的，用的是css的filter功能。"><a href="#1、每逢大的灾难的时候，很多网站变成了灰色，如何让网站快速变灰？css代码是很简单的，用的是css的filter功能。" class="headerlink" title="1、每逢大的灾难的时候，很多网站变成了灰色，如何让网站快速变灰？css代码是很简单的，用的是css的filter功能。"></a>1、每逢大的灾难的时候，很多网站变成了灰色，如何让网站快速变灰？css代码是很简单的，用的是css的filter功能。</h3><p>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">html &#123;</div><div class="line">   filter: grayscale(100%);//IE浏览器</div><div class="line">  -webkit-filter: grayscale(100%);//谷歌浏览器</div><div class="line">  -moz-filter: grayscale(100%);//火狐</div><div class="line">  -ms-filter: grayscale(100%);</div><div class="line">  -o-filter: grayscale(100%);</div><div class="line">  filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);</div><div class="line">  -webkit-filter: grayscale(1);//谷歌浏览器</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>有一些网站FLASH动画的颜色不能被CSS滤镜控制，可以在FLASH代码的和之间插入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;param value=&quot;false&quot; name=&quot;menu&quot;/&gt;</div><div class="line">&lt;param value=&quot;opaque&quot; name=&quot;wmode&quot;/&gt;</div></pre></td></tr></table></figure>
+<h3 id="2、DIV可编辑，就是让一个div变成一个类似input输入框的效果。"><a href="#2、DIV可编辑，就是让一个div变成一个类似input输入框的效果。" class="headerlink" title="2、DIV可编辑，就是让一个div变成一个类似input输入框的效果。"></a>2、DIV可编辑，就是让一个div变成一个类似input输入框的效果。</h3><p>在div中添加contentEditable=”true” 属性就可以了，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div1&quot; contentEditable=&quot;true&quot;  &gt;&lt;/div&gt;  </div><div class="line"></div><div class="line">&lt;div id=&quot;div2&quot; contentEditable=&quot;true&quot; &gt;&lt;/div&gt;  </div><div class="line"></div><div class="line"> &lt;div contentEditable=&quot;true&quot;  id=&quot;div3&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>其中，我后面有篇编辑器的文章 <a href="http://www.haorooms.com/post/js_guangbiao" target="_blank" rel="external">http://www.haorooms.com/post/js_guangbiao</a> 就用到了这个功能！这个是获得iframe光标所在位置的父节点名称，iframe中就用到了contentEditable=”true” 属性。</p>
+<h3 id="3、有些网站为了不让用户复制，设置了div禁止选择的功能，设置如下属性："><a href="#3、有些网站为了不让用户复制，设置了div禁止选择的功能，设置如下属性：" class="headerlink" title="3、有些网站为了不让用户复制，设置了div禁止选择的功能，设置如下属性："></a>3、有些网站为了不让用户复制，设置了div禁止选择的功能，设置如下属性：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">unselectable=&quot;on&quot; onselectstart=&quot;return false;&quot;</div></pre></td></tr></table></figure>
+<p>具体代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div unselectable=&quot;on&quot; onselectstart=&quot;return false;&quot;&gt;</div><div class="line">sdfsdfswerwer324234234234</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>这样，DIV里面的东西就不能选择复制了！</p>
+<h3 id="4、CSS-中form表单两端对齐"><a href="#4、CSS-中form表单两端对齐" class="headerlink" title="4、CSS 中form表单两端对齐"></a>4、CSS 中form表单两端对齐</h3><p>做form表单的时候，前面经常有姓名，年龄，公司名称等等，有的是2个字，有的是4个字，如何让字对齐呢？有的人的做法是打几个空格，但是这样不是很准确，最好的办法是如下：</p>
+<p>css代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">.test1 &#123;</div><div class="line">           text-align:justify;</div><div class="line">           text-justify:distribute-all-lines;/*ie6-8*/</div><div class="line">           text-align-last:justify;/* ie9*/</div><div class="line">           -moz-text-align-last:justify;/*ff*/</div><div class="line">           -webkit-text-align-last:justify;/*chrome 20+*/</div><div class="line">       &#125;</div><div class="line">       @media screen and (-webkit-min-device-pixel-ratio:0)&#123;/* chrome*/</div><div class="line">           .test1:after&#123;</div><div class="line">               content:&quot;.&quot;;</div><div class="line">               display: inline-block;</div><div class="line">               width:100%;</div><div class="line">               overflow:hidden;</div><div class="line">               height:0;</div><div class="line">           &#125;</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+<p>html代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;box1&quot;&gt;</div><div class="line">    &lt;div class=&quot;test1&quot;&gt;姓 名&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;test1&quot;&gt;姓 名 姓 名&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;test1&quot;&gt;姓 名 名&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;test1&quot;&gt;所 在 地&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;test1&quot;&gt;工 作 单 位&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<h3 id="5、input声音录入按钮，（紧支持谷歌）"><a href="#5、input声音录入按钮，（紧支持谷歌）" class="headerlink" title="5、input声音录入按钮，（紧支持谷歌）"></a>5、input声音录入按钮，（紧支持谷歌）</h3><p>如下图红色框框中的按钮</p>
+<p><img src="http://www.haorooms.com/uploads/images/speach.jpg" alt="enter image description here"></p>
+<p>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;text&quot; class=&quot;box&quot; name=&quot;s&quot; id=&quot;s&quot; class=&quot;inputText&quot; placeholder=&quot;输入关键词&quot;  x-webkit-speech&gt;</div></pre></td></tr></table></figure>
+<p>添加 x-webkit-speech 属性就可以了。</p>
+<h3 id="6、给input的placeholder设置颜色"><a href="#6、给input的placeholder设置颜色" class="headerlink" title="6、给input的placeholder设置颜色"></a>6、给input的placeholder设置颜色</h3><p>设置方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">::-webkit-input-placeholder &#123; /* WebKit browsers */</div><div class="line">    color:    #999;</div><div class="line">&#125;</div><div class="line">:-moz-placeholder &#123; /* Mozilla Firefox 4 to 18 */</div><div class="line">    color:    #999;</div><div class="line">&#125;</div><div class="line">::-moz-placeholder &#123; /* Mozilla Firefox 19+ */</div><div class="line">    color:    #999;</div><div class="line">&#125;</div><div class="line">:-ms-input-placeholder &#123; /* Internet Explorer 10+ */</div><div class="line">    color:    #999;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="7、css3实现一个div设置多张背景图片及background-image属性"><a href="#7、css3实现一个div设置多张背景图片及background-image属性" class="headerlink" title="7、css3实现一个div设置多张背景图片及background-image属性"></a>7、<a href="http://www.haorooms.com/post/css3_bg_multi" target="_blank" rel="external">css3实现一个div设置多张背景图片及background-image属性</a></h3><h3 id="8、CSS选中状态修改，谷歌滚动轴修改"><a href="#8、CSS选中状态修改，谷歌滚动轴修改" class="headerlink" title="8、CSS选中状态修改，谷歌滚动轴修改"></a>8、<a href="http://www.haorooms.com/post/CSS_selections" target="_blank" rel="external">CSS选中状态修改，谷歌滚动轴修改</a></h3><h3 id="9、css-input-type-file-样式美化，input上传按钮美化"><a href="#9、css-input-type-file-样式美化，input上传按钮美化" class="headerlink" title="9、css input[type=file] 样式美化，input上传按钮美化"></a>9、<a href="http://www.haorooms.com/post/css_input_uploadmh" target="_blank" rel="external">css input[type=file] 样式美化，input上传按钮美化</a></h3><h3 id="10、CSS-after-和：before选择器"><a href="#10、CSS-after-和：before选择器" class="headerlink" title="10、CSS :after 和：before选择器"></a>10、CSS :after 和：before选择器</h3><p>after选择器通常在clear中使用，用法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.clearfix:after&#123;display:block;visibility:hidden;clear:both;height:0;content:&apos;.&apos;;font-size:0&#125;</div></pre></td></tr></table></figure>
+<p>写了这个clearfix，可以让外层div包裹整个内层，符合谷歌闭合机制。</p>
+<p>也可以在某个元素前面或者后面追加，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">p:after</div><div class="line">&#123; </div><div class="line">content:&quot;haorooms：-&quot;;</div><div class="line">background-color:yellow;</div><div class="line">color:red;</div><div class="line">font-weight:bold;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>每个p标签后面都加了一个 -haorooms</p>
+<h3 id="11、透明度"><a href="#11、透明度" class="headerlink" title="11、透明度"></a>11、透明度</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">opacity: .9; </div><div class="line">filter:alpha(opacity=90)</div></pre></td></tr></table></figure>
+<p>IE7和IE6中opacity是没有用的，在IE6中DIV透明的方法一般用filter；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.haorooms&#123;opacity: 0; cursor:pointer;  -ms-filter:&quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=0)&quot;;filter: alpha(opacity=0);&#125;</div></pre></td></tr></table></figure>
+<h3 id="12、超出长度显示省略号"><a href="#12、超出长度显示省略号" class="headerlink" title="12、超出长度显示省略号"></a>12、超出长度显示省略号</h3><p><strong>单行文本显示…</strong></p>
+<p>一般要指定宽度，然后给如下四个属性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">display:bolck;</div><div class="line">overflow:hidden;</div><div class="line">white-space:nowrap;</div><div class="line">text-overflow:ellipsis;</div></pre></td></tr></table></figure>
+<p>案例代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.haorooms&#123;width:200px;display:bolck;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;&#125;</div></pre></td></tr></table></figure>
+<p><strong>多行文本显示….</strong></p>
+<p>主要属性-webkit-line-clamp</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">p &#123;</div><div class="line">    overflow : hidden;</div><div class="line">    text-overflow: ellipsis;</div><div class="line">    display: -webkit-box;</div><div class="line">    -webkit-line-clamp: 2;</div><div class="line">    -webkit-box-orient: vertical;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这个属性比较合适WebKit浏览器或移动端（绝大部分是WebKit内核的）浏览器。</p>
+<p><strong>跨浏览器兼容的方案</strong></p>
+<p>比较靠谱简单的做法就是设置相对定位的容器高度，用包含省略号(…)的元素模拟实现；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">p &#123;</div><div class="line">    position:relative;</div><div class="line">    line-height:1.4em;</div><div class="line">    /* 3 times the line-height to show 3 lines */</div><div class="line">    height:4.2em;</div><div class="line">    overflow:hidden;</div><div class="line">&#125;</div><div class="line">p::after &#123;</div><div class="line">    content:&quot;...&quot;;</div><div class="line">    font-weight:bold;</div><div class="line">    position:absolute;</div><div class="line">    bottom:0;</div><div class="line">    right:0;</div><div class="line">    padding:0 20px 1px 45px;</div><div class="line">   // background:url(和网页背景颜色一样的一张背景图) repeat-y;</div><div class="line">  background-color:#fff;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>注意：</strong></p>
+<blockquote>
+<p>height高度正好是line-height的3倍；</p>
+<p>结束的省略好用了半透明的png做了减淡的效果，或者设置背景颜色；</p>
+<p>IE6-7不显示content内容，所以要兼容IE6-7可以是在内容中加入一个标签，比如用…去模拟；</p>
+<p>要支持IE8，需要将::after替换成:after；</p>
+</blockquote>
+<h3 id="13、阴影效果"><a href="#13、阴影效果" class="headerlink" title="13、阴影效果"></a>13、阴影效果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.2);</div><div class="line">-moz-box-shadow: 0 1px 1px rgba(0,0,0,.2);</div><div class="line">box-shadow: 0 1px 1px rgba(0,0,0,.2);</div></pre></td></tr></table></figure>
+<h3 id="14、CSS强制换行和不换行"><a href="#14、CSS强制换行和不换行" class="headerlink" title="14、CSS强制换行和不换行"></a>14、CSS强制换行和不换行</h3><p>自动换行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">div&#123; </div><div class="line">word-wrap: break-word; </div><div class="line">word-break: normal; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>强制英文单词断行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">word-break:break-all;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>强制不换行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">white-space:nowrap;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="15、CSS-圆角"><a href="#15、CSS-圆角" class="headerlink" title="15、CSS 圆角"></a>15、CSS 圆角</h3><p>IE 9、Opera 10.5、Safari 5、Chrome 4和Firefox 4，都支持上述的border-radius属性。早期版本的Safari和Chrome，支持-webkit-border-radius属性，早期版本的Firefox支持-moz-border-radius属性。 目前来看，为了保证兼容性，只需同时设置-moz-border-radius和border-radius即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-moz-border-radius: 15px;</div><div class="line">border-radius: 15px;</div></pre></td></tr></table></figure>
+<p>（注意：border-radius必须放在最后声明，否则可能会失效。）</p>
+<p>另外，早期版本Firefox的单个圆角的语句，与标准语法略有不同。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-moz-border-radius-topleft（标准语法：border-top-left-radius）</div><div class="line">-moz-border-radius-topright（标准语法：border-top-right-radius）</div><div class="line">-moz-border-radius-bottomleft（标准语法：border-bottom-left-radius）</div><div class="line">-moz-border-radius-bottomright（标准语法：border-bottom-right-radius）</div></pre></td></tr></table></figure>
+<h3 id="16、css浏览器兼容问题的一些总结（IE6等）"><a href="#16、css浏览器兼容问题的一些总结（IE6等）" class="headerlink" title="16、css浏览器兼容问题的一些总结（IE6等）"></a>16、<a href="http://www.haorooms.com/post/IE_jianrong" target="_blank" rel="external">css浏览器兼容问题的一些总结（IE6等）</a></h3><h3 id="17、IE6-中png背景透明的最好方法及谈谈IE6和我的博客"><a href="#17、IE6-中png背景透明的最好方法及谈谈IE6和我的博客" class="headerlink" title="17、IE6 中png背景透明的最好方法及谈谈IE6和我的博客"></a>17、<a href="http://www.haorooms.com/post/IE6_tt" target="_blank" rel="external">IE6 中png背景透明的最好方法及谈谈IE6和我的博客</a></h3><h3 id="18、css3弹性盒子"><a href="#18、css3弹性盒子" class="headerlink" title="18、css3弹性盒子"></a>18、css3弹性盒子</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">#haorooms ul &#123; //父亲</div><div class="line">            display: -moz-box;</div><div class="line">            display: -webkit-box;</div><div class="line">            display: box;</div><div class="line">            -moz-box-orient: horizontal;</div><div class="line">            -webkit-box-orient: horizontal;</div><div class="line">            box-orient: horizontal;</div><div class="line">        &#125;</div><div class="line">        #haorooms  ul li&#123; //儿子设置</div><div class="line">            -moz-box-flex: 1;</div><div class="line">            -webkit-box-flex: 1;</div><div class="line">            box-flex: 1;</div><div class="line">            float:none;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>关于css3弹性盒子模型之box-flex，我在博客中暂时没有写相关文章，因为这个属性不支持IE，且是老版本的用法。</p>
+<p><strong>新版本用法：</strong></p>
+<p>html如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;m_topnav&quot;&gt;</div><div class="line">    &lt;a class=&quot;m_navli m_current&quot; href=&quot;#&quot;&gt;员工管理&lt;/a&gt;</div><div class="line">    &lt;a class=&quot;m_navli&quot; href=&quot;#&quot;&gt;员工动态&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>css如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">.m_topnav&#123; display: -webkit-flex;display: -moz-flex;display:flex;width:100%;height:1rem;background-color:#fff;border-bottom:1px solid #ddd;&#125;</div><div class="line">.m_navli&#123;-webkit-flex:1;-moz-flex:1;flex:1;position: relative;font-size:.24rem;text-align: center;line-height: 1rem;&#125;</div></pre></td></tr></table></figure>
+<p>直接用display:flex方法，支持IE11+ 及所有主流浏览器。</p>
+<p>另外，jquery mobile 有一套网格布局法，很不错，支持IE的，有时间可以参考一下，或者研究一下他们是怎么写的，参照他们的方法可以自己改写一下！</p>
+<p>关于弹性盒子式的布局，大家也可以看下bootstrap,bootstrap提出栅格类的一个说法，你引进他的css之后，可以用col-mid-*来进行布局。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;row&quot;&gt;</div><div class="line">  &lt;div class=&quot;col-md-6&quot;&gt;.col-md-6&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;col-md-6&quot;&gt;.col-md-6&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>各站一半！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;row&quot;&gt;</div><div class="line">  &lt;div class=&quot;col-md-8&quot;&gt;.col-md-8&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;col-md-4&quot;&gt;.col-md-4&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>前面的是整个宽度的三分之二，后面是整个宽度的三分之一！</p>
+<p>具体可以看看bootstrap的样式解释：<a href="http://v3.bootcss.com/css/" target="_blank" rel="external">http://v3.bootcss.com/css/</a></p>
+<h3 id="19、textarea禁止拖动"><a href="#19、textarea禁止拖动" class="headerlink" title="19、textarea禁止拖动"></a>19、textarea禁止拖动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">resize: none; //禁止拖动</div></pre></td></tr></table></figure>
+<p><strong>以下是resize属性的的各个取值:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">none：用户不能操纵机制调节元素的尺寸；</div><div class="line">both：用户可以调节元素的宽度和高度；</div><div class="line">horizontal：用户可以调节元素的宽度；</div><div class="line">vertical：让用户可以调节元素的高度；</div><div class="line">inherit：默认继承。</div></pre></td></tr></table></figure>
+<h3 id="20、div垂直居中的方法总结"><a href="#20、div垂直居中的方法总结" class="headerlink" title="20、div垂直居中的方法总结"></a>20、div垂直居中的方法总结</h3><p><a href="http://www.haorooms.com/post/css_div_juzhong" target="_blank" rel="external">div垂直居中</a>的方法，看我写的一篇文章吧！<a href="http://www.haorooms.com/post/css_div_juzhong" target="_blank" rel="external">http://www.haorooms.com/post/css_div_juzhong</a></p>
+<h3 id="21、css固定宽高DIV内部元素垂直居中的方法"><a href="#21、css固定宽高DIV内部元素垂直居中的方法" class="headerlink" title="21、css固定宽高DIV内部元素垂直居中的方法"></a>21、css固定宽高DIV内部元素垂直居中的方法</h3><p>和上面的20不同，这里说的是一个div内部元素如何垂直居中，具体请看：<a href="http://www.haorooms.com/post/div_guding_inner_center" target="_blank" rel="external">http://www.haorooms.com/post/div_guding_inner_center</a></p>
+<h3 id="22、纯css制作鼠标移上去显示图片效果"><a href="#22、纯css制作鼠标移上去显示图片效果" class="headerlink" title="22、纯css制作鼠标移上去显示图片效果"></a>22、纯css制作鼠标移上去显示图片效果</h3><p>具体请看我的一篇文章：<a href="http://www.haorooms.com/post/css_hover_jqs" target="_blank" rel="external">http://www.haorooms.com/post/css_hover_jqs</a></p>
+<h3 id="23、CSS3的一些前缀总结"><a href="#23、CSS3的一些前缀总结" class="headerlink" title="23、CSS3的一些前缀总结"></a>23、CSS3的一些前缀总结</h3><p>css3为了更好的兼容多个浏览器，通常前面加一大堆前缀，有时候感觉很烦，前缀也容易忘记或者漏掉。下面总结一下！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-webkit  /*为Chrome/Safari*/</div><div class="line">-moz  /*为Firefox*/</div><div class="line">-ms   /*为IE*/</div><div class="line">-o  /*为Opera*/</div></pre></td></tr></table></figure>
+<p>以旋转为例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">-webkit-transform:rotate(-3deg); /*为Chrome/Safari*/</div><div class="line">-moz-transform:rotate(-3deg); /*为Firefox*/</div><div class="line">-ms-transform:rotate(-3deg); /*为IE*/</div><div class="line">-o-transform:rotate(-3deg); /*为Opera*/</div><div class="line">transform:rotate(-3deg); /*为nothing*/</div></pre></td></tr></table></figure>
+<p>以border-radius为例(本文上面案例15，CSS 圆角已经提过圆角的问题，下面我们再来重提一下)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-moz-border-radius: 12px; /* FF1-3.6 */</div><div class="line">-webkit-border-radius: 12px; /* Saf3-4, iOS 1-3.2, Android &lt;1.6 */</div><div class="line">border-radius: 12px; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */</div></pre></td></tr></table></figure>
+<p>FF4、Saf5以及Chrome都支持border-radius属性了，我们就没有必要写以上两条了，代码变成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">border-radius: 12px;</div></pre></td></tr></table></figure>
+<p>所以有些常用的CSS3效果，由于浏览器都支持了，就不需要前缀，但是为了保险起见，你也可以加上前缀！</p>
+<h3 id="24、css3的box-sizing"><a href="#24、css3的box-sizing" class="headerlink" title="24、css3的box-sizing"></a>24、css3的box-sizing</h3><p>给了两个并排带边框的div百分比宽度，假如不用box-sizing，边框的宽度会在行内显示。用box-sizing：border-box,可以去除边框的占位。</p>
+<p>浏览器支持IE9以上及火狐、谷歌、Opera等等。</p>
+<p>案例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt; </div><div class="line">div.container</div><div class="line">&#123;</div><div class="line">width:30em;</div><div class="line">border:1em solid;</div><div class="line">&#125;</div><div class="line">div.box</div><div class="line">&#123;</div><div class="line">box-sizing:border-box;</div><div class="line">-moz-box-sizing:border-box; /* Firefox */</div><div class="line">-webkit-box-sizing:border-box; /* Safari */</div><div class="line">width:50%;</div><div class="line">border:1em solid red;</div><div class="line">float:left;</div><div class="line">&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">&lt;div class=&quot;box&quot;&gt;这个 div 占据左半部分。&lt;/div&gt;</div><div class="line">&lt;div class=&quot;box&quot;&gt;这个 div 占据右半部分。&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">box-sizing: content-box|border-box|inherit;</div></pre></td></tr></table></figure>
+<h3 id="25、模糊遮罩效率，模糊滤镜效果"><a href="#25、模糊遮罩效率，模糊滤镜效果" class="headerlink" title="25、模糊遮罩效率，模糊滤镜效果"></a>25、模糊遮罩效率，模糊滤镜效果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">-webkit-filter: blur(3px);</div><div class="line">-moz-filter: blur(3px);</div><div class="line">-o-filter: blur(3px);</div><div class="line">-ms-filter: blur(3px);</div><div class="line">filter: blur(3px);</div></pre></td></tr></table></figure>
+<p>Blur：模糊效果。使选择区内的影像产生虚化的效果，可以平滑的转换影像中的生硬部分。</p>
+<h3 id="26、渐变效果"><a href="#26、渐变效果" class="headerlink" title="26、渐变效果"></a>26、渐变效果</h3><p>默认渐变是从上往下代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">background:#ed4a60; </div><div class="line">background: -webkit-linear-gradient(#ed5a5e, #ed3a61);</div><div class="line">background: -o-linear-gradient(#ed5a5e, #ed3a61); </div><div class="line"> background: -moz-linear-gradient(#ed5a5e, #ed3a61); </div><div class="line">background: linear-gradient(#ed5a5e, #ed3a61);</div></pre></td></tr></table></figure>
+<p>前面加一个参数，right,left,bottom,top等，就可以指定渐变方向：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">background:-moz-linear-gradient(left,#ace,#f96);/*Mozilla*/</div><div class="line">background:-webkit-gradient(linear,0 50%,100% 50%,from(#ace),to(#f96));/*Old gradient for webkit*/</div><div class="line">background:-webkit-linear-gradient(left,#ace,#f96);/*new gradient for Webkit*/</div><div class="line">background:-o-linear-gradient(left,#ace,#f96); /*Opera11*/</div></pre></td></tr></table></figure>
+<p>还可以从左上角开始渐变left top，right top(右上角)以此类推，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background: -moz-linear-gradient(left top, #ace, #f96);</div><div class="line">background: -webkit-linear-gradient(left top, #ace, #f96);</div><div class="line">background: -o-linear-gradient(left top, #ace, #f96);</div></pre></td></tr></table></figure>
+<p>另外还可以指定渐变角度，这个角度是一个由水平线与渐变线产生的的角度，逆时针方向。因此，使用0deg将产生一个左到右横向梯度，而90度将创建一个从底部到顶部的垂直渐变。</p>
+<p>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">background: -moz-linear-gradient(&lt;angle&gt;, #ace, #f96);</div><div class="line">background: -webkit-gradient(&lt;type&gt;,&lt;angle&gt;, from(#ace), to(#f96));//老的写法</div><div class="line">background: -webkit-linear-gradient(&lt;angle&gt;, #ace, #f96);</div><div class="line">background: -o-linear-gradient(&lt;angle&gt;, #ace, #f96);</div><div class="line"></div><div class="line">.deg45 &#123;</div><div class="line">  background: -moz-linear-gradient(45deg, #ace, #f96);</div><div class="line">  background: -webkit-gradient(linear,0 100%,100% 0%,from(#ace),to(#f96));</div><div class="line">  background: -webkit-linear-gradient(45deg, #ace, #f96);</div><div class="line">  background: -o-linear-gradient(45deg, #ace, #f96);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/31/防止短时间内多次触发函数/" rel="prev" title="防止短时间内多次触发函数">
+                防止短时间内多次触发函数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Today" />
+          <p class="site-author-name" itemprop="name">Today</p>
+           
+              <p class="site-description motion-element" itemprop="description">竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/anlena" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/suo-yi-ke-60" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-zhihu"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/user/home?id=75504616" target="_blank" title="网易音乐">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  网易音乐
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#css常用效果总结"><span class="nav-number">1.</span> <span class="nav-text">css常用效果总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、每逢大的灾难的时候，很多网站变成了灰色，如何让网站快速变灰？css代码是很简单的，用的是css的filter功能。"><span class="nav-number">1.0.1.</span> <span class="nav-text">1、每逢大的灾难的时候，很多网站变成了灰色，如何让网站快速变灰？css代码是很简单的，用的是css的filter功能。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、DIV可编辑，就是让一个div变成一个类似input输入框的效果。"><span class="nav-number">1.0.2.</span> <span class="nav-text">2、DIV可编辑，就是让一个div变成一个类似input输入框的效果。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、有些网站为了不让用户复制，设置了div禁止选择的功能，设置如下属性："><span class="nav-number">1.0.3.</span> <span class="nav-text">3、有些网站为了不让用户复制，设置了div禁止选择的功能，设置如下属性：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、CSS-中form表单两端对齐"><span class="nav-number">1.0.4.</span> <span class="nav-text">4、CSS 中form表单两端对齐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、input声音录入按钮，（紧支持谷歌）"><span class="nav-number">1.0.5.</span> <span class="nav-text">5、input声音录入按钮，（紧支持谷歌）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、给input的placeholder设置颜色"><span class="nav-number">1.0.6.</span> <span class="nav-text">6、给input的placeholder设置颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、css3实现一个div设置多张背景图片及background-image属性"><span class="nav-number">1.0.7.</span> <span class="nav-text">7、css3实现一个div设置多张背景图片及background-image属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、CSS选中状态修改，谷歌滚动轴修改"><span class="nav-number">1.0.8.</span> <span class="nav-text">8、CSS选中状态修改，谷歌滚动轴修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、css-input-type-file-样式美化，input上传按钮美化"><span class="nav-number">1.0.9.</span> <span class="nav-text">9、css input[type=file] 样式美化，input上传按钮美化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10、CSS-after-和：before选择器"><span class="nav-number">1.0.10.</span> <span class="nav-text">10、CSS :after 和：before选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11、透明度"><span class="nav-number">1.0.11.</span> <span class="nav-text">11、透明度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12、超出长度显示省略号"><span class="nav-number">1.0.12.</span> <span class="nav-text">12、超出长度显示省略号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13、阴影效果"><span class="nav-number">1.0.13.</span> <span class="nav-text">13、阴影效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14、CSS强制换行和不换行"><span class="nav-number">1.0.14.</span> <span class="nav-text">14、CSS强制换行和不换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15、CSS-圆角"><span class="nav-number">1.0.15.</span> <span class="nav-text">15、CSS 圆角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16、css浏览器兼容问题的一些总结（IE6等）"><span class="nav-number">1.0.16.</span> <span class="nav-text">16、css浏览器兼容问题的一些总结（IE6等）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17、IE6-中png背景透明的最好方法及谈谈IE6和我的博客"><span class="nav-number">1.0.17.</span> <span class="nav-text">17、IE6 中png背景透明的最好方法及谈谈IE6和我的博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18、css3弹性盒子"><span class="nav-number">1.0.18.</span> <span class="nav-text">18、css3弹性盒子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19、textarea禁止拖动"><span class="nav-number">1.0.19.</span> <span class="nav-text">19、textarea禁止拖动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20、div垂直居中的方法总结"><span class="nav-number">1.0.20.</span> <span class="nav-text">20、div垂直居中的方法总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21、css固定宽高DIV内部元素垂直居中的方法"><span class="nav-number">1.0.21.</span> <span class="nav-text">21、css固定宽高DIV内部元素垂直居中的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22、纯css制作鼠标移上去显示图片效果"><span class="nav-number">1.0.22.</span> <span class="nav-text">22、纯css制作鼠标移上去显示图片效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23、CSS3的一些前缀总结"><span class="nav-number">1.0.23.</span> <span class="nav-text">23、CSS3的一些前缀总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24、css3的box-sizing"><span class="nav-number">1.0.24.</span> <span class="nav-text">24、css3的box-sizing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25、模糊遮罩效率，模糊滤镜效果"><span class="nav-number">1.0.25.</span> <span class="nav-text">25、模糊遮罩效率，模糊滤镜效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#26、渐变效果"><span class="nav-number">1.0.26.</span> <span class="nav-text">26、渐变效果</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Today</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
