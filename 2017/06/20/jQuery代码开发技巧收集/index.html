@@ -1,0 +1,860 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=sans:300,300italic,400,400italic,700,700italic|sans-serif:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Menlo:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="前端, HTML5,css,js," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="jQuery代码开发技巧收集,jquery常用的开发代码原文地址 今天分享一个jquery常用的开发代码，大部分是网友总结的，总共60条。后期我也会陆续完善！ 把我在开发中常用的写在这里，希望持续关注~~">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery代码开发技巧收集">
+<meta property="og:url" content="http://yoursite.com/2017/06/20/jQuery代码开发技巧收集/index.html">
+<meta property="og:site_name" content="Today Notes">
+<meta property="og:description" content="jQuery代码开发技巧收集,jquery常用的开发代码原文地址 今天分享一个jquery常用的开发代码，大部分是网友总结的，总共60条。后期我也会陆续完善！ 把我在开发中常用的写在这里，希望持续关注~~">
+<meta property="og:updated_time" content="2017-06-20T09:33:40.041Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery代码开发技巧收集">
+<meta name="twitter:description" content="jQuery代码开发技巧收集,jquery常用的开发代码原文地址 今天分享一个jquery常用的开发代码，大部分是网友总结的，总共60条。后期我也会陆续完善！ 把我在开发中常用的写在这里，希望持续关注~~">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/20/jQuery代码开发技巧收集/"/>
+
+
+
+
+
+  <title> jQuery代码开发技巧收集 | Today Notes </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Today Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">note note note</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/20/jQuery代码开发技巧收集/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Today">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Today Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                jQuery代码开发技巧收集
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-20T17:32:42+08:00">
+                2017-06-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="jQuery代码开发技巧收集-jquery常用的开发代码"><a href="#jQuery代码开发技巧收集-jquery常用的开发代码" class="headerlink" title="jQuery代码开发技巧收集,jquery常用的开发代码"></a>jQuery代码开发技巧收集,jquery常用的开发代码</h1><p><a href="http://www.haorooms.com/post/jquery_shouji_all" target="_blank" rel="external">原文地址</a></p>
+<p>今天分享一个jquery常用的开发代码，大部分是网友总结的，总共60条。后期我也会陆续完善！ 把我在开发中常用的写在这里，希望持续关注~~</p>
+<a id="more"></a>
+<p><strong>1. 使用siblings()来处理同类元素</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// Rather than doing this</div><div class="line">$(&apos;#nav li&apos;).click(function()&#123;</div><div class="line">    $(&apos;#nav li&apos;).removeClass(&apos;active&apos;);</div><div class="line">    $(this).addClass(&apos;active&apos;);</div><div class="line">&#125;);</div><div class="line">// Do this instead</div><div class="line">$(&apos;#nav li&apos;).click(function()&#123;</div><div class="line">    $(this).addClass(&apos;active&apos;).siblings().removeClass(&apos;active&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>2. 选择或者不选页面上全部复选框</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var tog = false; // or true if they are checked on load</div><div class="line">$(&apos;a&apos;).click(function() &#123;</div><div class="line">    $(&quot;input[type=checkbox]&quot;).attr(&quot;checked&quot;,!tog);</div><div class="line">    tog = !tog;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>3. 基于输入文字过滤页面元素</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//If the value of the element matches that of the entered text</div><div class="line">//it will be returned</div><div class="line">$(&apos;.gbin1Class&apos;).filter(function() &#123;</div><div class="line">    return $(this).attr(&apos;value&apos;) == $(&apos;input#gbin1Id&apos;).val() ;</div><div class="line"> &#125;)</div></pre></td></tr></table></figure>
+<p><strong>4. 取得鼠标的X和Y坐标</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$(document).mousemove(function(e)&#123;</div><div class="line">$(document).ready(function() &#123;</div><div class="line">$().mousemove(function(e)&#123;</div><div class="line">$(&apos;#XY&apos;).html(&quot;Gbin1 X Axis : &quot; + e.pageX + &quot; | Gbin1 Y Axis &quot; + e.pageY);</div><div class="line">&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>5. 使得整个列表元素(LI)可点击</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$(&quot;ul li&quot;).click(function()&#123;</div><div class="line">  window.location=$(this).find(&quot;a&quot;).attr(&quot;href&quot;); return false;</div><div class="line">&#125;);</div><div class="line">&lt;UL&gt;</div><div class="line">&lt;LI&gt;&lt;A href=&quot;#&quot;&gt;GBin1 Link 1&lt;/A&gt;&lt;/LI&gt;</div><div class="line">&lt;LI&gt;&lt;A href=&quot;#&quot;&gt;GBin1 Link 2&lt;/A&gt;&lt;/LI&gt;</div><div class="line">&lt;LI&gt;&lt;A href=&quot;#&quot;&gt;GBin1 Link 3&lt;/A&gt;&lt;/LI&gt;</div><div class="line">&lt;LI&gt;&lt;A href=&quot;#&quot;&gt;GBin1 Link 4&lt;/A&gt;&lt;/LI&gt;</div><div class="line">&lt;/UL&gt;</div></pre></td></tr></table></figure>
+<p><strong>6. 使用jQuery来解析XML</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function parseXml(xml) &#123;</div><div class="line">  //find every Tutorial and print the author</div><div class="line">  $(xml).find(&quot;Tutorial&quot;).each(function()</div><div class="line">  &#123;</div><div class="line">  $(&quot;#output&quot;).append($(this).attr(&quot;author&quot;) + &quot;&quot;);</div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>7. 判断一个图片是否加载完全</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&apos;#theGBin1Image&apos;).attr(&apos;src&apos;, &apos;image.jpg&apos;).load(function() &#123;</div><div class="line">alert(&apos;This Image Has Been Loaded&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>8. 使用jQuery命名事件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//Events can be namespaced like this</div><div class="line">$(&apos;input&apos;).bind(&apos;blur.validation&apos;, function(e)&#123;</div><div class="line">    // ...</div><div class="line">&#125;);</div><div class="line">//The data method also accept namespaces</div><div class="line">$(&apos;input&apos;).data(&apos;validation.isValid&apos;, true);</div></pre></td></tr></table></figure>
+<p><strong>9. 判断cookie是否激活或者关闭</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var dt = new Date();</div><div class="line">dt.setSeconds(dt.getSeconds() + 60);</div><div class="line">document.cookie = &quot;cookietest=1; expires=&quot; + dt.toGMTString();</div><div class="line">var cookiesEnabled = document.cookie.indexOf(&quot;cookietest=&quot;) != -1;</div><div class="line">if(!cookiesEnabled)</div><div class="line">&#123;</div><div class="line">  //cookies have not been enabled</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>10.强制过期cookie</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var date = new Date();</div><div class="line">date.setTime(date.getTime() + (x * 60 * 1000));</div><div class="line">$.cookie(&apos;example&apos;, &apos;foo&apos;, &#123; expires: date &#125;);</div></pre></td></tr></table></figure>
+<p><strong>11. 使用一个可点击的链接替换页面中所有URL</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$.fn.replaceUrl = function() &#123;</div><div class="line">        var regexp = /((ftp|http|https)://(w+:&#123;0,1&#125;w*@)?(S+)(:[0-9]+)?(/|/([w#!:.?+=&amp;%@!-/]))?)/gi;</div><div class="line">        this.each(function() &#123;</div><div class="line">            $(this).html(</div><div class="line">                $(this).html().replace(regexp,&apos;&lt;A href=&quot;$1&quot;&gt;$1&lt;/A&gt;&apos;)</div><div class="line">            );</div><div class="line">        &#125;);</div><div class="line">        return $(this);</div><div class="line">    &#125;</div><div class="line">//usage</div><div class="line">$(&apos;#GBin1div&apos;).replaceUrl();</div></pre></td></tr></table></figure>
+<p><strong>12. 在表单中禁用“回车键”</strong></p>
+<p>大家可能在表单的操作中需要防止用户意外的提交表单，那么下面这段代码肯定非常有帮助：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(&quot;#form&quot;).keypress(function(e) &#123;</div><div class="line">  if (e.which == 13) &#123;</div><div class="line">    return false;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>13. 清除所有的表单数据</strong></p>
+<p>可能针对不同的表单形式，你需要调用不同类型的清楚方法，不过使用下面这个现成方法，绝对能让你省不少功夫。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">function clearForm(form) &#123;</div><div class="line">  // iterate over all of the inputs for the form</div><div class="line">  // element that was passed in</div><div class="line">  $(&apos;:input&apos;, form).each(function() &#123;</div><div class="line">    var type = this.type;</div><div class="line">    var tag = this.tagName.toLowerCase(); // normalize case</div><div class="line">    // it&apos;s ok to reset the value attr of text inputs,</div><div class="line">    // password inputs, and textareas</div><div class="line">    if (type == &apos;text&apos; || type == &apos;password&apos; || tag == &apos;textarea&apos;)</div><div class="line">      this.value = &quot;&quot;;</div><div class="line">    // checkboxes and radios need to have their checked state cleared</div><div class="line">    // but should *not* have their &apos;value&apos; changed</div><div class="line">    else if (type == &apos;checkbox&apos; || type == &apos;radio&apos;)</div><div class="line">      this.checked = false;</div><div class="line">    // select elements need to have their &apos;selectedIndex&apos; property set to -1</div><div class="line">    // (this works for both single and multiple select elements)</div><div class="line">    else if (tag == &apos;select&apos;)</div><div class="line">      this.selectedIndex = -1;</div><div class="line">  &#125;);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><strong>14. 将表单中的按钮禁用</strong></p>
+<p>下面的代码对于ajax操作非常有用，你可以有效的避免用户多次提交数据，个人也经常使用：</p>
+<p>禁用按钮：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;#somebutton&quot;).attr(&quot;disabled&quot;, true);</div></pre></td></tr></table></figure>
+<p>启动按钮：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;#submit-button&quot;).removeAttr(&quot;disabled&quot;);</div></pre></td></tr></table></figure>
+<p>可能大家往往会使用.attr(‘disabled’,false);，不过这是不正确的调用。</p>
+<p><strong>15. 输入内容后启用递交按钮</strong></p>
+<p>这个代码和上面类似，都属于帮助用户控制表单递交按钮。使用这段代码后，递交按钮只有在用户输入指定内容后才可以启动。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&apos;#username&apos;).keyup(function() &#123;</div><div class="line">    $(&apos;#submit&apos;).attr(&apos;disabled&apos;, !$(&apos;#username&apos;).val()); </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>16.禁止多次递交表单</strong></p>
+<p>多次递交表单对于web应用来说是个比较头疼的问题，下面的代码能够很好的帮助你解决这个问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function() &#123;</div><div class="line">  $(&apos;form&apos;).submit(function() &#123;</div><div class="line">    if(typeof jQuery.data(this, &quot;disabledOnSubmit&quot;) == &apos;undefined&apos;) &#123;</div><div class="line">      jQuery.data(this, &quot;disabledOnSubmit&quot;, &#123; submited: true &#125;);</div><div class="line">      $(&apos;input[type=submit], input[type=button]&apos;, this).each(function() &#123;</div><div class="line">        $(this).attr(&quot;disabled&quot;, &quot;disabled&quot;);</div><div class="line">      &#125;);</div><div class="line">      return true;</div><div class="line">    &#125;</div><div class="line">    else</div><div class="line">    &#123;</div><div class="line">      return false;</div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>17. 高亮显示目前聚焦的输入框标示</strong></p>
+<p>有时候你需要提示用户目前操作的输入框，你可以使用下面代码高亮显示标示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(&quot;form :input&quot;).focus(function() &#123;</div><div class="line">  $(&quot;label[for=&apos;&quot; + this.id + &quot;&apos;]&quot;).addClass(&quot;labelfocus&quot;);</div><div class="line">&#125;).blur(function() &#123;</div><div class="line">  $(&quot;label&quot;).removeClass(&quot;labelfocus&quot;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>18. 动态方式添加表单元素</strong></p>
+<p>这个方法可以帮助你动态的添加表单中的元素，比如，input等：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//change event on password1 field to prompt new input</div><div class="line">$(&apos;#password1&apos;).change(function() &#123;</div><div class="line">        //dynamically create new input and insert after password1</div><div class="line">        $(&quot;#password1&quot;).append(&quot;&lt;input type=&apos;text&apos; name=&apos;password2&apos; id=&apos;password2&apos; /&gt;&quot;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>19. 自动将数据导入selectbox中</strong></p>
+<p>下面代码能够使用ajax数据自动生成选择框的内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">  $(&quot;select#ctlJob&quot;).change(function()&#123;</div><div class="line">    $.getJSON(&quot;/select.php&quot;,&#123;id: $(this).val(), ajax: &apos;true&apos;&#125;, function(j)&#123;</div><div class="line">      var options = &apos;&apos;;</div><div class="line">      for (var i = 0; i &lt; j.length; i++) &#123;</div><div class="line">        options += &apos;&lt;option value=&quot;&apos; + j[i].optionValue + &apos;&quot;&gt;&apos; + j[i].optionDisplay + &apos;&lt;/option&gt;&apos;;</div><div class="line">      &#125;</div><div class="line">      $(&quot;select#ctlPerson&quot;).html(options);</div><div class="line">    &#125;)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p><strong>20.判断一个复选框是否被选中</strong></p>
+<p>代码很简单，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;#checkBox&apos;).attr(&apos;checked&apos;);</div></pre></td></tr></table></figure>
+<p><strong>21. 使用代码来递交表单</strong></p>
+<p>代码很简单，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;#myform&quot;).submit();</div></pre></td></tr></table></figure>
+<p><strong>22. 创建一个嵌套的过滤器</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.filter(&quot;:not(:has(.selected))&quot;) //去掉所有不包含class为.selected的元素</div></pre></td></tr></table></figure>
+<p><strong>23. 重用你的元素查询</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var allItems = $(&quot;div.item&quot;);  </div><div class="line">var keepList = $(&quot;div#container1 div.item&quot;); </div><div class="line">&lt;div&gt;class names: </div><div class="line">$(formToLookAt + &quot; input:checked&quot;).each(function() &#123;     keepListkeepList = keepList.filter(&quot;.&quot; + $(this).attr(&quot;name&quot;)); &#125;);</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p><strong>24. 使用has()来判断一个元素是否包含特定的class或者元素</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//jQuery 1.4.* includes support for the has method. This method will find  </div><div class="line">//if a an element contains a certain other element class or whatever it is  </div><div class="line">//you are looking for and do anything you want to them. </div><div class="line">$(&quot;input&quot;).has(&quot;.email&quot;).addClass(&quot;email_icon&quot;);</div></pre></td></tr></table></figure>
+<p><strong>25. 使用jQuery切换样式</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//Look for the media-type you wish to switch then set the href to your new style sheet  </div><div class="line">$(&apos;link[media=&apos;screen&apos;]&apos;).attr(&apos;href&apos;, &apos;Alternative.css&apos;);</div></pre></td></tr></table></figure>
+<p><strong>26. 限制选择的区域</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//Where possible, pre-fix your class names with a tag name  </div><div class="line">//so that jQuery doesn&apos;t have to spend more time searching  </div><div class="line">//for the element you&apos;re after. Also remember that anything  </div><div class="line">//you can do to be more specific about where the element is  </div><div class="line">//on your page will cut down on execution/search times  </div><div class="line">var in_stock = $(&apos;#shopping_cart_items input.is_in_stock&apos;);</div><div class="line">&lt;ul id=&quot;shopping_cart_items&quot;&gt;  </div><div class="line">&lt;li&gt;  </div><div class="line">&lt;input value=&quot;Item-X&quot; name=&quot;item&quot; class=&quot;is_in_stock&quot; type=&quot;radio&quot;&gt; Item X&lt;/li&gt;  </div><div class="line">&lt;li&gt;  </div><div class="line">&lt;input value=&quot;Item-Y&quot; name=&quot;item&quot; class=&quot;3-5_days&quot; type=&quot;radio&quot;&gt; Item Y&lt;/li&gt;  </div><div class="line">&lt;li&gt;  </div><div class="line">&lt;input value=&quot;Item-Z&quot; name=&quot;item&quot; class=&quot;unknown&quot; type=&quot;radio&quot;&gt; Item Z&lt;/li&gt;  </div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure>
+<p><strong>27. 如何正确使用ToggleClass</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//Toggle class allows you to add or remove a class  </div><div class="line">//from an element depending on the presence of that  </div><div class="line">//class. Where some developers would use:  </div><div class="line">a.hasClass(&apos;blueButton&apos;) ? a.removeClass(&apos;blueButton&apos;) : a.addClass(&apos;blueButton&apos;);  </div><div class="line">//toggleClass allows you to easily do this using  </div><div class="line">a.toggleClass(&apos;blueButton&apos;);</div></pre></td></tr></table></figure>
+<p><strong>28. 设置IE指定的功能</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">if ($.browser.msie) &#123; // Internet Explorer is a sadist. &#125;</div></pre></td></tr></table></figure>
+<p><strong>29. 使用jQuery来替换一个元素</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;#thatdiv&apos;).replaceWith(&apos;fnuh&apos;);</div></pre></td></tr></table></figure>
+<p><strong>30. 验证一个元素是否为空</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">if ($(&apos;#keks&apos;).html()) &#123; //Nothing found ;&#125;</div></pre></td></tr></table></figure>
+<p><strong>31. 在无序的set中查找一个元素的索引</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&quot;ul &gt; li&quot;).click(function () &#123;  </div><div class="line">    var index = $(this).prevAll().length;  </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>32. 绑定一个函数到一个事件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&apos;#foo&apos;).bind(&apos;click&apos;, function() &#123;  </div><div class="line">  alert(&apos;User clicked on &quot;foo.&quot;&apos;);  </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>33. 添加HTML到一个元素</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;#lal&apos;).append(&apos;sometext&apos;);</div></pre></td></tr></table></figure>
+<p><strong>34. 创建元素时使用对象来定义属性</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var e = $(&quot;&quot;, &#123; href: &quot;#&quot;, class: &quot;a-class another-class&quot;, title: &quot;...&quot; &#125;);</div></pre></td></tr></table></figure>
+<p><strong>35. 使用过滤器过滤多属性</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//This precision-based approached can be useful when you use  </div><div class="line">//lots of similar input elements which have different types  </div><div class="line">var elements = $(&apos;#someid input[type=sometype][value=somevalue]&apos;).get();</div></pre></td></tr></table></figure>
+<p><strong>36. 使用jQuery预加载图片</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">jQuery.preloadImages = function() &#123; for(var i = 0; i&apos;).attr(&apos;src&apos;, arguments[i]); &#125; &#125;;  </div><div class="line">// Usage $.preloadImages(&apos;image1.gif&apos;, &apos;/path/to/image2.png&apos;, &apos;some/image3.jpg&apos;);</div></pre></td></tr></table></figure>
+<p><strong>37. 设置任何匹配一个选择器的事件处理程序</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$(&apos;button.someClass&apos;).live(&apos;click&apos;, someFunction);</div><div class="line">  //Note that in jQuery 1.4.2, the delegate and undelegate options have been</div><div class="line">  //introduced to replace live as they offer better support for context</div><div class="line">    //For example, in terms of a table where before you would use..</div><div class="line">  // .live()</div><div class="line">  $(&quot;table&quot;).each(function()&#123;</div><div class="line">    $(&quot;td&quot;, this).live(&quot;hover&quot;, function()&#123;</div><div class="line">    $(this).toggleClass(&quot;hover&quot;);</div><div class="line">    &#125;);</div><div class="line">  &#125;);</div><div class="line">  //Now use..</div><div class="line">  $(&quot;table&quot;).delegate(&quot;td&quot;, &quot;hover&quot;, function()&#123;</div><div class="line">  $(this).toggleClass(&quot;hover&quot;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>38. 找到被选择到的选项(option)元素</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;#someElement&apos;).find(&apos;option:selected&apos;);</div></pre></td></tr></table></figure>
+<p><strong>39. 隐藏包含特定值的元素</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;p.value:contains(&apos;thetextvalue&apos;)&quot;).hide();</div></pre></td></tr></table></figure>
+<p><strong>40. 自动的滚动到页面特定区域</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">jQuery.fn.autoscroll = function(selector) &#123;</div><div class="line">  $(&apos;html,body&apos;).animate(</div><div class="line">    &#123;scrollTop: $(selector).offset().top&#125;,</div><div class="line">    500</div><div class="line">  );</div><div class="line">&#125;</div><div class="line">//Then to scroll to the class/area you wish to get to like this:</div><div class="line">$(&apos;.area_name&apos;).autoscroll();</div></pre></td></tr></table></figure>
+<p><strong>42. 检测各种浏览器</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Detect Safari (if( $.browser.safari)),</div><div class="line">Detect IE6 and over (if ($.browser.msie &amp;&amp; $.browser.version &gt; 6 )),</div><div class="line">Detect IE6 and below (if ($.browser.msie &amp;&amp; $.browser.version &lt;= 6 )),</div><div class="line">Detect FireFox 2 and above (if ($.browser.mozilla &amp;&amp; $.browser.version &gt;= &apos;1.8&apos; ))</div></pre></td></tr></table></figure>
+<p><strong>42. 替换字符串中的单词</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var el = $(&apos;#id&apos;);</div><div class="line">el.html(el.html().replace(/word/ig, &apos;&apos;));</div></pre></td></tr></table></figure>
+<p><strong>43. 关闭右键的菜单</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(document).bind(&apos;contextmenu&apos;,function(e)&#123; return false; &#125;);</div></pre></td></tr></table></figure>
+<p><strong>44. 定义一个定制的选择器</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$.expr[&apos;:&apos;].mycustomselector = function(element, index, meta, stack)&#123;</div><div class="line">// element- is a DOM element</div><div class="line">// index - the current loop index in stack</div><div class="line">// meta - meta data about your selector</div><div class="line">// stack - stack of all elements to loop</div><div class="line">// Return true to include current element</div><div class="line">// Return false to explude current element</div><div class="line">&#125;;</div><div class="line">// Custom Selector usage:</div><div class="line">$(&apos;.someClasses:test&apos;).doSomething();</div></pre></td></tr></table></figure>
+<p><strong>45. 判断一个元素是否存在</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">if ($(&apos;#someDiv&apos;).length) &#123;//hooray!!! it exists...&#125;</div></pre></td></tr></table></figure>
+<p><strong>46. 使用jQuery判断鼠标的左右键点击</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(&quot;#someelement&quot;).live(&apos;click&apos;, function(e) &#123;</div><div class="line">    if( (!$.browser.msie &amp;&amp; e.button == 0) || ($.browser.msie &amp;&amp; e.button == 1) ) &#123;</div><div class="line">        alert(&quot;Left Mouse Button Clicked&quot;);</div><div class="line">    &#125;</div><div class="line">    else if(e.button == 2)</div><div class="line">        alert(&quot;Right Mouse Button Clicked&quot;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>47. 显示或者删除输入框的缺省值</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">//This snippet will show you how to keep a default value</div><div class="line">//in a text input field for when a user hasn&apos;t entered in</div><div class="line">//a value to replace it</div><div class="line">swap_val = [];</div><div class="line">$(&quot;.swap&quot;).each(function(i)&#123;</div><div class="line">    swap_val[i] = $(this).val();</div><div class="line">    $(this).focusin(function()&#123;</div><div class="line">        if ($(this).val() == swap_val[i]) &#123;</div><div class="line">            $(this).val(&quot;&quot;);</div><div class="line">        &#125;</div><div class="line">    &#125;).focusout(function()&#123;</div><div class="line">        if ($.trim($(this).val()) == &quot;&quot;) &#123;</div><div class="line">            $(this).val(swap_val[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;);</div><div class="line">&lt;INPUT class=swap value=&quot;Enter Username here..&quot; type=text&gt;</div></pre></td></tr></table></figure>
+<p><strong>48. 指定时间后自动隐藏或者关闭元素(1.4支持）</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//Here&apos;s how we used to do it in 1.3.2 using setTimeout</div><div class="line">setTimeout(function() &#123;</div><div class="line">  $(&apos;.mydiv&apos;).hide(&apos;blind&apos;, &#123;&#125;, 500)</div><div class="line">&#125;, 5000);</div><div class="line">//And here&apos;s how you can do it with 1.4 using the delay() feature (this is a lot like sleep)</div><div class="line">$(&quot;.mydiv&quot;).delay(5000).hide(&apos;blind&apos;, &#123;&#125;, 500);</div></pre></td></tr></table></figure>
+<p><strong>49. 动态创建元素到DOM</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var newgbin1Div = $(&apos;&apos;);</div><div class="line">newgbin1Div.attr(&apos;id&apos;,&apos;gbin1.com&apos;).appendTo(&apos;body&apos;);</div></pre></td></tr></table></figure>
+<p><strong>50. 限制textarea的字符数量</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">jQuery.fn.maxLength = function(max)&#123;</div><div class="line">  this.each(function()&#123;</div><div class="line">    var type = this.tagName.toLowerCase();</div><div class="line">    var inputType = this.type? this.type.toLowerCase() : null;</div><div class="line">    if(type == &quot;input&quot; &amp;&amp; inputType == &quot;text&quot; || inputType == &quot;password&quot;)&#123;</div><div class="line">      //Apply the standard maxLength</div><div class="line">      this.maxLength = max;</div><div class="line">    &#125;</div><div class="line">    else if(type == &quot;textarea&quot;)&#123;</div><div class="line">      this.onkeypress = function(e)&#123;</div><div class="line">        var ob = e || event;</div><div class="line">        var keyCode = ob.keyCode;</div><div class="line">        var hasSelection = document.selection? document.selection.createRange().text.length &gt; 0 : this.selectionStart != this.selectionEnd;</div><div class="line">        return !(this.value.length &gt;= max &amp;&amp; (keyCode &gt; 50 || keyCode == 32 || keyCode == 0 || keyCode == 13) &amp;&amp; !ob.ctrlKey &amp;&amp; !ob.altKey &amp;&amp; !hasSelection);</div><div class="line">      &#125;;</div><div class="line">      this.onkeyup = function()&#123;</div><div class="line">        if(this.value.length &gt; max)&#123;</div><div class="line">          this.value = this.value.substring(0,max);</div><div class="line">        &#125;</div><div class="line">      &#125;;</div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line">&#125;;</div><div class="line">//Usage:</div><div class="line">$(&apos;#gbin1textarea&apos;).maxLength(500);</div></pre></td></tr></table></figure>
+<p><strong>51. 为函数创建一个基本测试用例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//Separate tests into modules.</div><div class="line">module(&quot;Module B&quot;);</div><div class="line">test(&quot;some other gbin1.com test&quot;, function() &#123;</div><div class="line">  //Specify how many assertions are expected to run within a test.</div><div class="line">  expect(2);</div><div class="line">  //A comparison assertion, equivalent to JUnit&apos;s assertEquals.</div><div class="line">  equals( true, false, &quot;failing test&quot; );</div><div class="line">  equals( true, true, &quot;passing test&quot; );</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>52. 使用jQuery克隆元素</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var cloned = $(&apos;#gbin1div&apos;).clone();</div></pre></td></tr></table></figure>
+<p><strong>53. 测试一个元素在jQuery中是否可见</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">if($(element).is(&apos;:visible&apos;) == &apos;true&apos;) &#123; //The element is Visible &#125;</div></pre></td></tr></table></figure>
+<p><strong>54. 元素屏幕居中</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">jQuery.fn.center = function () &#123;</div><div class="line">  this.css(&apos;position&apos;,&apos;absolute&apos;);</div><div class="line">  this.css(&apos;top&apos;, ( $(window).height() - this.height() ) / +$(window).scrollTop() + &apos;px&apos;);</div><div class="line">  this.css(&apos;left&apos;, ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + &apos;px&apos;);return this;</div><div class="line">&#125;</div><div class="line">//Use the above function as: $(&apos;#gbin1div&apos;).center();</div></pre></td></tr></table></figure>
+<p><strong>55. 使用特定名字的元素对应的值生成一个数组</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arrInputValues = new Array();</div><div class="line">$(&quot;input[name=&apos;table[]&apos;]&quot;).each(function()&#123;</div><div class="line">     arrInputValues.push($(this).val());</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>56. 剔除元素中的HTML</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">(function($) &#123;</div><div class="line">    $.fn.stripHtml = function() &#123;</div><div class="line">        var regexp = /&lt;(&quot;[^&quot;]*&quot;|&apos;[^&apos;]*&apos;|[^&apos;&quot;&gt;])*&gt;/gi;</div><div class="line">        this.each(function() &#123;</div><div class="line">            $(this).html(</div><div class="line">                $(this).html().replace(regexp,&quot;&quot;)</div><div class="line">            );</div><div class="line">        &#125;);</div><div class="line">        return $(this);</div><div class="line">    &#125;</div><div class="line">&#125;)(jQuery);</div><div class="line">//usage:</div><div class="line">$(&apos;p&apos;).stripHtml();</div></pre></td></tr></table></figure>
+<p><strong>57. 使用closest来得到父元素</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;#searchBox&apos;).closest(&apos;div&apos;);</div></pre></td></tr></table></figure>
+<p><strong>58. 使用firebug来记录jQuery事件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// Allows chainable logging</div><div class="line">// Usage: $(&apos;#someDiv&apos;).hide().log(&apos;div hidden&apos;).addClass(&apos;someClass&apos;);</div><div class="line">jQuery.log = jQuery.fn.log = function (msg) &#123;</div><div class="line">      if (console)&#123;</div><div class="line">         console.log(&quot;%s: %o&quot;, msg, this);</div><div class="line">      &#125;</div><div class="line">      return this;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><strong>59. 点击链接强制弹出新窗口</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">jQuery(&apos;a.popup&apos;).live(&apos;click&apos;, function()&#123;</div><div class="line">  newwindow=window.open($(this).attr(&apos;href&apos;),&apos;&apos;,&apos;height=200,width=150&apos;);</div><div class="line">  if (window.focus) &#123;newwindow.focus()&#125;</div><div class="line">  return false;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>60 .点击链接强制打开新标签页</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">jQuery(&apos;a.newTab&apos;).live(&apos;click&apos;, function()&#123;</div><div class="line">  newwindow=window.open($(this).href);</div><div class="line">  jQuery(this).target = &quot;_blank&quot;;</div><div class="line">  return false;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><strong>61 .简单的tab标签切换</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">jQuery(&apos;#meeting_tabs ul li&apos;).click(function()&#123;</div><div class="line">        jQuery(this).addClass(&apos;tabulous_active&apos;).siblings().removeClass(&apos;tabulous_active&apos;);</div><div class="line">        jQuery(&apos;#tabs_container&gt;.pane:eq(&apos;+jQuery(this).index()+&apos;)&apos;).show().siblings().hide();   </div><div class="line"> &#125;)</div><div class="line"></div><div class="line">&lt;div id=&quot;meeting_tabs&quot;&gt;</div><div class="line">                &lt;ul&gt;</div><div class="line">                     &lt;li class=&quot;tabulous_active&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;进行中&lt;/a&gt;&lt;/li&gt;</div><div class="line">                      &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;未开始&lt;/a&gt;&lt;/li&gt;</div><div class="line">                      &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;已结束&lt;/a&gt;&lt;/li&gt;</div><div class="line">                       &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;&quot;&gt;全部&lt;/a&gt;&lt;/li&gt;</div><div class="line">                 &lt;/ul&gt;</div><div class="line">   &lt;div id=&quot;tabs_container&quot;&gt;</div><div class="line">            &lt;div  class=&quot;pane&quot;     &gt;1&lt;/div&gt;</div><div class="line">            &lt;div  class=&quot;pane&quot;     &gt;2&lt;/div&gt;</div><div class="line">            &lt;div  class=&quot;pane&quot;     &gt;3&lt;/div&gt;</div><div class="line">           &lt;div  class=&quot;pane&quot;     &gt;4&lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>是不是很简洁呢？</p>
+<h3 id="62、js和jquery解决placeholder兼容IE8等低版本浏览器"><a href="#62、js和jquery解决placeholder兼容IE8等低版本浏览器" class="headerlink" title="62、js和jquery解决placeholder兼容IE8等低版本浏览器"></a>62、js和jquery解决placeholder兼容IE8等低版本浏览器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;  </div><div class="line">  if( !(&apos;placeholder&apos; in document.createElement(&apos;input&apos;)) )&#123;  </div><div class="line"></div><div class="line">    $(&apos;input[placeholder],textarea[placeholder]&apos;).each(function()&#123;   </div><div class="line">      var that = $(this),   </div><div class="line">      text= that.attr(&apos;placeholder&apos;);   </div><div class="line">      if(that.val()===&quot;&quot;)&#123;   </div><div class="line">        that.val(text).addClass(&apos;placeholder&apos;);   </div><div class="line">      &#125;   </div><div class="line">      that.focus(function()&#123;   </div><div class="line">        if(that.val()===text)&#123;   </div><div class="line">          that.val(&quot;&quot;).removeClass(&apos;placeholder&apos;);   </div><div class="line">        &#125;   </div><div class="line">      &#125;)   </div><div class="line">      .blur(function()&#123;   </div><div class="line">        if(that.val()===&quot;&quot;)&#123;   </div><div class="line">          that.val(text).addClass(&apos;placeholder&apos;);   </div><div class="line">        &#125;   </div><div class="line">      &#125;)   </div><div class="line">      .closest(&apos;form&apos;).submit(function()&#123;   </div><div class="line">        if(that.val() === text)&#123;   </div><div class="line">          that.val(&apos;&apos;);   </div><div class="line">        &#125;   </div><div class="line">      &#125;);   </div><div class="line">    &#125;);   </div><div class="line">  &#125;  </div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/20/css常用效果总结/" rel="prev" title="css常用效果总结">
+                css常用效果总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Today" />
+          <p class="site-author-name" itemprop="name">Today</p>
+           
+              <p class="site-description motion-element" itemprop="description">竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/anlena" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/suo-yi-ke-60" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-zhihu"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/user/home?id=75504616" target="_blank" title="网易音乐">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  网易音乐
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#jQuery代码开发技巧收集-jquery常用的开发代码"><span class="nav-number">1.</span> <span class="nav-text">jQuery代码开发技巧收集,jquery常用的开发代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#62、js和jquery解决placeholder兼容IE8等低版本浏览器"><span class="nav-number">1.0.1.</span> <span class="nav-text">62、js和jquery解决placeholder兼容IE8等低版本浏览器</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Today</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
