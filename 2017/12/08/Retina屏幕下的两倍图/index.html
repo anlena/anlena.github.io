@@ -110,17 +110,17 @@
 
 
 
-<meta name="description" content="原文地址">
+<meta name="description" content="原文地址  css方案 123456789#element &amp;#123; background-image: url(&apos;hires.png&apos;); &amp;#125;@media only screen and (min-device-pixel-ratio: 2) &amp;#123;    #element &amp;#123; background-image: url(&apos;hires@2x.png&apos;); &amp;#125">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="防止短时间内多次触发函数">
-<meta property="og:url" content="http://yoursite.com/2017/05/31/防止短时间内多次触发函数/index.html">
+<meta property="og:title" content="Retina屏幕下的两倍图">
+<meta property="og:url" content="http://yoursite.com/2017/12/08/Retina屏幕下的两倍图/index.html">
 <meta property="og:site_name" content="Today Notes">
-<meta property="og:description" content="原文地址">
-<meta property="og:updated_time" content="2017-05-31T07:32:24.957Z">
+<meta property="og:description" content="原文地址  css方案 123456789#element &amp;#123; background-image: url(&apos;hires.png&apos;); &amp;#125;@media only screen and (min-device-pixel-ratio: 2) &amp;#123;    #element &amp;#123; background-image: url(&apos;hires@2x.png&apos;); &amp;#125">
+<meta property="og:updated_time" content="2017-12-08T05:44:42.543Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="防止短时间内多次触发函数">
-<meta name="twitter:description" content="原文地址">
+<meta name="twitter:title" content="Retina屏幕下的两倍图">
+<meta name="twitter:description" content="原文地址  css方案 123456789#element &amp;#123; background-image: url(&apos;hires.png&apos;); &amp;#125;@media only screen and (min-device-pixel-ratio: 2) &amp;#123;    #element &amp;#123; background-image: url(&apos;hires@2x.png&apos;); &amp;#125">
 
 
 
@@ -148,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/31/防止短时间内多次触发函数/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/08/Retina屏幕下的两倍图/"/>
 
 
 
 
 
-  <title> 防止短时间内多次触发函数 | Today Notes </title>
+  <title> Retina屏幕下的两倍图 | Today Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -283,7 +283,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/31/防止短时间内多次触发函数/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/08/Retina屏幕下的两倍图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Today">
@@ -304,7 +304,7 @@
             
             
               
-                防止短时间内多次触发函数
+                Retina屏幕下的两倍图
               
             
           </h1>
@@ -319,8 +319,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-31T15:29:39+08:00">
-                2017-05-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-08T13:41:28+08:00">
+                2017-12-08
               </time>
             
 
@@ -355,9 +355,16 @@
       
 
       
-        <p><a href="http://www.css88.com/archives/4648" target="_blank" rel="external">原文地址</a></p>
-<a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> resizeTimer=<span class="literal">null</span>;</div><div class="line">$(<span class="built_in">window</span>).on(<span class="string">'resize'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       <span class="keyword">if</span>(resizeTimer)&#123;</div><div class="line">           clearTimeout(resizeTimer)</div><div class="line">       &#125;</div><div class="line">       resizeTimer=setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">           <span class="built_in">console</span>.log(<span class="string">"window resize"</span>);</div><div class="line">       &#125;,<span class="number">400</span>);</div><div class="line">   &#125;</div><div class="line">);</div></pre></td></tr></table></figure>
+        <p><a href="http://insights.thoughtworks.cn/css-retina-image/" target="_blank" rel="external">原文地址</a></p>
+<ul>
+<li><p>css方案</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#element</span> &#123; <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">'hires.png'</span>); &#125;</div><div class="line"></div><div class="line">@<span class="keyword">media</span> only screen and (min-device-pixel-ratio: <span class="number">2</span>) &#123;</div><div class="line">    <span class="selector-id">#element</span> &#123; <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">'hires@2x.png'</span>); &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@<span class="keyword">media</span> only screen and (min-device-pixel-ratio: <span class="number">3</span>) &#123;</div><div class="line">    <span class="selector-id">#element</span> &#123; <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">'hires@3x.png'</span>); &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>js</p>
+<p><a href="http://imulus.github.io/" target="_blank" rel="external">retina.js</a></p>
+</li>
+</ul>
+
       
     </div>
 
@@ -393,18 +400,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/20/css常用效果总结/" rel="next" title="css常用效果总结">
-                <i class="fa fa-chevron-left"></i> css常用效果总结
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/23/实用的60个css代码片段-转/" rel="prev" title="实用的60个css代码片段(转)">
-                实用的60个css代码片段(转) <i class="fa fa-chevron-right"></i>
+              <a href="/2017/11/24/手机移动端WEB资源整合/" rel="prev" title="手机移动端WEB资源整合">
+                手机移动端WEB资源整合 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

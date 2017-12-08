@@ -110,17 +110,15 @@
 
 
 
-<meta name="description" content="原文地址">
-<meta name="keywords">
-<meta property="og:type" content="article">
-<meta property="og:title" content="防止短时间内多次触发函数">
-<meta property="og:url" content="http://yoursite.com/2017/05/31/防止短时间内多次触发函数/index.html">
+<meta name="description" content="竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Today Notes">
+<meta property="og:url" content="http://yoursite.com/archives/2017/12/index.html">
 <meta property="og:site_name" content="Today Notes">
-<meta property="og:description" content="原文地址">
-<meta property="og:updated_time" content="2017-05-31T07:32:24.957Z">
+<meta property="og:description" content="竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="防止短时间内多次触发函数">
-<meta name="twitter:description" content="原文地址">
+<meta name="twitter:title" content="Today Notes">
+<meta name="twitter:description" content="竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。">
 
 
 
@@ -148,13 +146,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/31/防止短时间内多次触发函数/"/>
+  <link rel="canonical" href="http://yoursite.com/archives/2017/12/"/>
 
 
 
 
 
-  <title> 防止短时间内多次触发函数 | Today Notes </title>
+  <title> 归档 | Today Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -179,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-right page-post-detail ">
+  <div class="container sidebar-position-right  page-archive  ">
     <div class="headband"></div>
     <a href="https://github.com/anlena"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/8b6b8ccc6da3aa5722903da7b58eb5ab1081adee/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -273,155 +271,66 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/31/防止短时间内多次触发函数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Today">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Today Notes">
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      嗯..! 目前共计 26 篇日志。 继续努力。
     </span>
 
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                防止短时间内多次触发函数
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-31T15:29:39+08:00">
-                2017-05-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
 
       
       
-
-      
-        <p><a href="http://www.css88.com/archives/4648" target="_blank" rel="external">原文地址</a></p>
-<a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> resizeTimer=<span class="literal">null</span>;</div><div class="line">$(<span class="built_in">window</span>).on(<span class="string">'resize'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       <span class="keyword">if</span>(resizeTimer)&#123;</div><div class="line">           clearTimeout(resizeTimer)</div><div class="line">       &#125;</div><div class="line">       resizeTimer=setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">           <span class="built_in">console</span>.log(<span class="string">"window resize"</span>);</div><div class="line">       &#125;,<span class="number">400</span>);</div><div class="line">   &#125;</div><div class="line">);</div></pre></td></tr></table></figure>
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
       
 
       
         
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/06/20/css常用效果总结/" rel="next" title="css常用效果总结">
-                <i class="fa fa-chevron-left"></i> css常用效果总结
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/23/实用的60个css代码片段-转/" rel="prev" title="实用的60个css代码片段(转)">
-                实用的60个css代码片段(转) <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
         </div>
       
+      
 
       
-      
-    </footer>
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2017/12/08/Retina屏幕下的两倍图/" itemprop="url">
+              
+                <span itemprop="name">Retina屏幕下的两倍图</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-12-08T13:41:28+08:00"
+              content="2017-12-08" >
+          12-08
+        </time>
+      </div>
+
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+    
+
+  </section>
+
+  
+
 
 
           </div>
@@ -429,10 +338,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -640,9 +545,11 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
 
 
   
