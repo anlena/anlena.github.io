@@ -110,17 +110,15 @@
 
 
 
-<meta name="description" content="一、meta标签的相关知识 1、移动端页面设置视口宽度等于设备宽度，并禁止缩放。 1">
-<meta name="keywords">
-<meta property="og:type" content="article">
-<meta property="og:title" content="移动页面小技巧">
-<meta property="og:url" content="http://yoursite.com/2017/06/29/移动页面小技巧/index.html">
+<meta name="description" content="竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Today Notes">
+<meta property="og:url" content="http://yoursite.com/page/7/index.html">
 <meta property="og:site_name" content="Today Notes">
-<meta property="og:description" content="一、meta标签的相关知识 1、移动端页面设置视口宽度等于设备宽度，并禁止缩放。 1">
-<meta property="og:updated_time" content="2017-06-29T09:38:44.616Z">
+<meta property="og:description" content="竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="移动页面小技巧">
-<meta name="twitter:description" content="一、meta标签的相关知识 1、移动端页面设置视口宽度等于设备宽度，并禁止缩放。 1">
+<meta name="twitter:title" content="Today Notes">
+<meta name="twitter:description" content="竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。">
 
 
 
@@ -148,13 +146,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/29/移动页面小技巧/"/>
+  <link rel="canonical" href="http://yoursite.com/page/7/"/>
 
 
 
 
 
-  <title> 移动页面小技巧 | Today Notes </title>
+  <title> Today Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -179,7 +177,9 @@
     
   
 
-  <div class="container sidebar-position-right page-post-detail ">
+  <div class="container sidebar-position-right 
+   page-home 
+ ">
     <div class="headband"></div>
     <a href="https://github.com/anlena"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/8b6b8ccc6da3aa5722903da7b58eb5ab1081adee/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -272,9 +272,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -283,7 +283,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/29/移动页面小技巧/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/01/Flex布局新旧混合写法详解（兼容微信）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Today">
@@ -304,7 +304,10 @@
             
             
               
-                移动页面小技巧
+                
+                <a class="post-title-link" href="/2017/03/01/Flex布局新旧混合写法详解（兼容微信）/" itemprop="url">
+                  Flex布局新旧混合写法详解（兼容微信）
+                </a>
               
             
           </h1>
@@ -319,8 +322,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-29T17:37:52+08:00">
-                2017-06-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-01T22:44:14+08:00">
+                2017-03-01
               </time>
             
 
@@ -355,95 +358,29 @@
       
 
       
-        <p><strong>一、meta标签的相关知识</strong></p>
-<p>1、移动端页面设置视口宽度等于设备宽度，并禁止缩放。</p>
-<p>1 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"></p>
-<a id="more"></a>
-<p>2、移动端页面设置视口宽度等于定宽（如640px），并禁止缩放，常用于微信浏览器页面。</p>
-<p>1 <meta name="viewport" content="width=640,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"></p>
-<p>3、禁止将页面中的数字识别为电话号码</p>
-<p>1 <meta name="format-detection" content="telephone=no"></p>
-<p>4、忽略Android平台中对邮箱地址的识别</p>
-<p><strong>1 <meta name="format-detection" content="email=no"></strong></p>
-<hr>
-<p>5、当网站添加到主屏幕快速启动方式，可隐藏地址栏，仅针对ios的safari</p>
-<p>1 <meta name="apple-mobile-web-app-capable" content="yes"><br><!-- ios7.0版本以后，safari上已看不到效果 --></p>
-<p>6、将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式</p>
-<p><strong>1 <meta name="apple-mobile-web-app-status-bar-style" content="black"><!-- 可选default、black、black-translucent --></strong></p>
-<p>viewport模板</p>
-<p><strong>&lt;!DOCTYPE html&gt;<html><head><meta charset="utf-8"><meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta content="email=no" name="format-detection"><title>title</title><link rel="stylesheet" href="index.css"></head><body>content…</body></html></strong><br><strong>二、CSS的样式技巧</strong></p>
-<p>1、禁止ios和android用户选中文字</p>
-<p><strong>.css{-webkit-user-select:none}</strong></p>
-<hr>
-<p>2、禁止ios长按时触发系统的菜单，禁止ios&amp;android长按时下载图片<br><strong>.css{-webkit-touch-callout: none}</strong></p>
-<hr>
-<p>3、webkit去除表单元素的默认样式</p>
-<p><strong>.css{-webkit-appearance:none;}</strong></p>
-<hr>
-<p>4、修改webkit表单输入框placeholder的样式</p>
-<p><strong>input::-webkit-input-placeholder{color:#AAAAAA;}input:focus::-webkit-input-placeholder{color:#EEEEEE;}</strong><br>5、去除android a/button/input标签被点击时产生的边框 &amp; 去除ios a标签被点击时产生的半透明灰色背景</p>
-<p><strong>a,button,input{-webkit-tap-highlight-color:rgba(255,0,0,0);}</strong></p>
-<hr>
-<p>6、ios使用-webkit-text-size-adjust禁止调整字体大小</p>
-<p><strong>body{-webkit-text-size-adjust: 100%!important;}</strong></p>
-<hr>
-<p>7、android 上去掉语音输入按钮</p>
-<p><strong>input::-webkit-input-speech-button {display: none}</strong></p>
-<hr>
-<p>8、移动端定义字体，移动端没有微软雅黑字体</p>
-<p><strong>/* 移动端定义字体的代码 */body{font-family:Helvetica;}</strong></p>
-<hr>
-<p><strong>三、其他技巧</strong><br>1、手机拍照和上传图片</p>
-<p><strong><!-- 选择照片 --><input type="file" accept="image/\*"><!-- 选择视频 --><input type="file" accept="video/*"></strong><br>2、取消input在ios下，输入的时候英文首字母的默认大写</p>
-<p><strong><input autocapitalize="off" autocorrect="off"></strong></p>
-<hr>
-<p>3、打电话和发短信</p>
-<p><strong><a href="tel:0755-10086" target="_blank" rel="external">打电话给:0755-10086</a><a href="sms:10086" target="_blank" rel="external">发短信给: 10086</a></strong><br><strong>四、CSS reset</strong><br><strong>@charset “utf-8”;/* reset <em>/html{-webkit-text-size-adjust:none;-webkit-user-select:none;-webkit-touch-callout: nonefont-family: Helvetica;}body{font-size:12px;}body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,pre,form,input,textarea,th,td,select{margin:0; padding:0; font-weight: normal;text-indent: 0;}a,button,input,textarea,select{ background: none; -webkit-tap-highlight-color:rgba(255,0,0,0); outline:none; -webkit-appearance:none;}em{font-style:normal}li{list-style:none}a{text-decoration:none;}img{border:none; vertical-align:top;}table{border-collapse:collapse;}textarea{ resize:none; overflow:auto;}/</em> end reset */</strong></p>
-<hr>
-<p><strong><strong><strong>**</strong></strong></strong>五、常用公用CSS style**</p>
-<p>/<em> public </em>/</p>
-<p>/<em> 清除浮动 </em>/<br>.clear { zoom:1; }<br>.clear:after { content:’’; display:block; clear:both; }</p>
-<p>/<em> 定义盒模型为怪异和模型（宽高不受边框影响） </em>/<br>.boxSiz{<br>-webkit-box-sizing: border-box;<br>-moz-box-sizing: border-box;<br>-ms-box-sizing: border-box;<br>-o-box-sizing: border-box;<br>box-sizing: border-box;<br>}</p>
-<p>/<em> 强制换行 </em>/<br>.toWrap{<br>word-break: break-all;       /<em> 只对英文起作用，以字母作为换行依据。 </em>/<br>word-wrap: break-word;      /<em> 只对英文起作用，以单词作为换行依据。</em>/<br>white-space: pre-wrap;     /<em> 只对中文起作用，强制换行。</em>/<br>}</p>
-<p>/<em> 禁止换行 </em>/<br>.noWrap{<br>white-space:nowrap;<br>}</p>
-<p>/<em> 禁止换行,超出省略号 </em>/<br>.noWrapEllipsis{<br>white-space:nowrap; overflow:hidden; text-overflow:ellipsis;<br>}</p>
-<p>/<em> 文字两端对齐 </em>/<br>.text-justify{<br>text-align:justify;<br>text-justify:inter-ideograph;<br>}</p>
-<p>/<em> 定义盒模型为 flex布局兼容写法并让内容水平垂直居中 </em>/<br>.flex-center{<br>display: -webkit-box;<br>display: -moz-box;<br>display: -ms-flexbox;<br>display: -o-box;<br>display: box;</p>
-<p>-webkit-box-pack: center;<br>-moz-box-pack: center;<br>-ms-flex-pack: center;<br>-o-box-pack: center;<br>box-pack: center;</p>
-<p>-webkit-box-align: center;<br>-moz-box-align: center;<br>-ms-flex-align: center;<br>-o-box-align: center;<br>box-align: center;<br>}</p>
-<p>/<em> public end </em>/</p>
-<p><strong>六、flex弹性布局</strong><br>1、定义弹性盒模型兼容写法</p>
-<p><strong>/*boxinline-box*/display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -o-box;display: box;</strong><br>2、box-orient 定义盒模型内伸缩项目的布局方向</p>
-<p><strong>/*</strong> vertical column  垂直<em> horizontal row   水平 默认值</em>/-webkit-box-orient: horizontal;-moz-box-orient: horizontal;-ms-flex-direction: row;-o-box-orient: horizontal;box-orient: horizontal;**<br>3、box-direction 定义盒模型内伸缩项目的正序(normal默认值)、倒叙(reverse)</p>
-<p><strong>/* Firefox <em>/display:-moz-box;-moz-box-direction:reverse;/</em> Safari、Opera 以及 Chrome */display:-webkit-box;-webkit-box-direction:reverse;</strong><br>4、box-pack 对盒子水平富裕空间的管理</p>
-<p><strong>/*startendcenterjustify*/-webkit-box-pack: center;-moz-box-pack: center;-ms-flex-pack: center;-o-box-pack: center;box-pack: center;</strong><br>5、box-pack 对盒子垂直方向富裕空间的管理</p>
-<p><strong>/*   start   end   center<em>//</em> box-align */-webkit-box-align: center;-moz-box-align: center;-ms-flex-align: center;-o-box-align: center;box-align: center;</strong></p>
-<hr>
-<p>6、定义伸缩项目的具体位置</p>
-<p><strong>/*-moz-box-ordinal-group:1;<em>/ /</em> Firefox <em>//</em>-webkit-box-ordinal-group:1;<em>/ /</em> Safari 和 Chrome */.box div:nth-of-type(1){-webkit-box-ordinal-group:1;}.box div:nth-of-type(2){-webkit-box-ordinal-group:2;}.box div:nth-of-type(3){-webkit-box-ordinal-group:3;}.box div:nth-of-type(4){-webkit-box-ordinal-group:4;}.box div:nth-of-type(5){-webkit-box-ordinal-group:5;}</strong><br>7、定义伸缩项目占空间的份数</p>
-<p><strong>-moz-box-flex:2.0; /* Firefox <em>/-webkit-box-flex:2.0; /</em> Safari 和 Chrome */.box div:nth-of-type(1){-webkit-box-flex:1;}.box div:nth-of-type(2){-webkit-box-flex:2;}.box div:nth-of-type(3){-webkit-box-flex:3;}.box div:nth-of-type(4){-webkit-box-flex:4;}.box div:nth-of-type(5){-webkit-box-flex:5;}</strong></p>
-
+        
+          <p>假设flex容器为.box，子元素为.item。</p>
+<p><a href="https://segmentfault.com/a/1190000003978624">原文地址</a></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/01/Flex布局新旧混合写法详解（兼容微信）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
-      
-        
-
       
     </div>
 
@@ -451,42 +388,151 @@
       
 
       
-        
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/09/14/前端常见跨域解决方案/" rel="next" title="前端常见跨域解决方案">
-                <i class="fa fa-chevron-left"></i> 前端常见跨域解决方案
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/22/循环添加事件的几种方法/" rel="prev" title="循环添加事件的几种方法">
-                循环添加事件的几种方法 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+      
 
-    <div class="post-spread">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/github-hexo搭建手册/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Today">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Today Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/28/github-hexo搭建手册/" itemprop="url">
+                  github+hexo搭建手册
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-28T18:12:07+08:00">
+                2017-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="external">参考地址</a></p>
+<p><a href="http://blog.csdn.net/rainloving/article/details/46595559" target="_blank" rel="external">git</a></p>
+<p><a href="http://blog.sina.com.cn/s/blog_53786db50102e9ma.html" target="_blank" rel="external">git</a></p>
+<p><a href="http://www.jianshu.com/p/67c57c70f275" target="_blank" rel="external">hexo坑</a></p>
+<p><a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="external">hexo参数</a></p>
+<p><a href="http://iissnan.com/progit/" target="_blank" rel="external">git学习手册</a></p>
+
+          
+        
       
     </div>
-  </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span>
+  </nav>
+
 
 
           </div>
@@ -494,10 +540,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -705,10 +747,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
 
   
 
